@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO: PRIMARY META ============ -->
+  <title>Moritz Buch – Freelance Performance Marketing & E-Commerce | Meta & Google Ads</title>
+  <meta name="description" content="Freelancer für Performance Marketing & E-Commerce mit 9+ Jahren Erfahrung. Meta & Google Ads, Lead-Generierung für lokale Dienstleister, Arztpraxen & B2B/B2C, AI-first Creatives, CRM & E-Mail-Marketing – strategisch gedacht, operativ umgesetzt." />
+  <meta name="keywords" content="Performance Marketing Freelancer, Meta Ads, Google Ads, Lead-Generierung, Leads für Arztpraxen, lokales Marketing, B2B Leadgenerierung, E-Commerce Beratung, AI Creatives, CRM, E-Mail-Marketing, TikTok Ads" />
+  <meta name="author" content="Moritz Buch" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://moritz-buch.com/" />
+
+  <!-- ============ SEO: OPEN GRAPH ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Moritz Buch – Freelance Performance Marketing & E-Commerce" />
+  <meta property="og:description" content="9+ Jahre Performance Marketing. Meta & Google Ads, AI-first Creatives, Content-Funnel & Dashboards. Strategisch gedacht, operativ umgesetzt." />
+  <meta property="og:url" content="https://moritz-buch.com/" />
+  <meta property="og:image" content="https://moritz-buch.com/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- ============ SEO: TWITTER CARD ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moritz Buch – Freelance Performance Marketing & E-Commerce" />
+  <meta name="twitter:description" content="9+ Jahre Performance Marketing. Meta & Google Ads, AI-first Creatives, Content-Funnel & Dashboards." />
+  <meta name="twitter:image" content="https://moritz-buch.com/og-image.jpg" />
+
+  <!-- ============ SEO: STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Moritz Buch",
+    "jobTitle": "Freelance Performance Marketing & E-Commerce Consultant",
+    "url": "https://moritz-buch.com/",
+    "email": "contact@moritz-buch.com",
+    "telephone": "+4917685635216",
+    "knowsAbout": ["Meta Ads", "Google Ads", "TikTok Ads", "Performance Marketing", "Lead-Generierung", "Lokales Marketing", "E-Commerce", "AI Creatives", "Klaviyo", "E-Mail-Marketing", "CRM", "Conversion Tracking", "Marketing Dashboards"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0c0e12;
+      --bg-soft: #14171d;
+      --surface: #181c23;
+      --surface-2: #1f242d;
+      --ink: #f4f6f8;
+      --ink-soft: #a8b0bd;
+      --ink-dim: #6b7480;
+      --accent: #5b8cff;
+      --accent-2: #00d68f;
+      --line: #262b34;
+      --radius: 18px;
+      --maxw: 1120px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Sora', sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    a { color: inherit; text-decoration: none; }
+
+    /* glow background */
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(700px circle at 20% -5%, rgba(91,140,255,.12), transparent 55%),
+        radial-gradient(600px circle at 95% 5%, rgba(0,214,143,.08), transparent 50%);
+    }
+
+    /* ===== Nav ===== */
+    nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px); background: rgba(12,14,18,.72); border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .logo { font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -0.03em; }
+    .logo b { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a { font-size: 15px; color: var(--ink-soft); transition: color .2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { background: var(--accent); color: #fff !important; padding: 10px 20px; border-radius: 100px; font-weight: 600; transition: transform .2s, box-shadow .2s; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(91,140,255,.35); }
+    @media (max-width: 760px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+    /* ===== Hero ===== */
+    header { position: relative; z-index: 1; padding: 110px 0 90px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; color: var(--accent-2); font-weight: 600; background: rgba(0,214,143,.08); border: 1px solid rgba(0,214,143,.2); padding: 7px 16px; border-radius: 100px; margin-bottom: 30px; }
+    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); }
+    header h1 { font-size: clamp(2.6rem, 6.5vw, 5rem); max-width: 17ch; margin-bottom: 26px; font-weight: 800; }
+    header h1 span { background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .lede { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 56ch; margin-bottom: 40px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 16px 32px; border-radius: 100px; font-weight: 600; font-size: 16px; transition: transform .2s, box-shadow .2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(91,140,255,.4); }
+    .btn-ghost { padding: 16px 24px; border-radius: 100px; border: 1px solid var(--line); font-weight: 600; color: var(--ink); transition: border-color .2s, background .2s; }
+    .btn-ghost:hover { border-color: var(--ink-dim); background: var(--surface); }
+
+    /* ===== Marquee / trust ===== */
+    .trust { position: relative; z-index: 1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; background: var(--bg-soft); }
+    .trust p { text-align: center; font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-dim); margin-bottom: 18px; }
+    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; }
+    .trust-logos span { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--ink-soft); opacity: .8; }
+
+    /* ===== Sections ===== */
+    section { position: relative; z-index: 1; padding: 90px 0; }
+    .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
+    .s-title { font-size: clamp(2rem, 4.5vw, 3rem); max-width: 22ch; margin-bottom: 20px; }
+    .s-intro { color: var(--ink-soft); max-width: 60ch; margin-bottom: 60px; font-size: 1.1rem; }
+
+    /* ===== Services ===== */
+    #leistungen { border-top: 1px solid var(--line); }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .25s, border-color .25s; position: relative; overflow: hidden; }
+    .svc:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .svc-num { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 18px; display: block; }
+    .svc h3 { font-size: 1.35rem; margin-bottom: 12px; }
+    .svc p { color: var(--ink-soft); font-size: 15px; }
+    .svc.feature { background: linear-gradient(160deg, rgba(91,140,255,.12), var(--surface)); border-color: rgba(91,140,255,.3); }
+    .svc.feature .svc-num { color: var(--accent-2); }
+
+    /* ===== About ===== */
+    #about { border-top: 1px solid var(--line); }
+    .stat-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 64px; }
+    .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; text-align: center; }
+    .stat-num { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+    .stat-label { font-size: 13px; color: var(--ink-soft); line-height: 1.4; }
+    @media (max-width: 760px) { .stat-bar { grid-template-columns: repeat(2, 1fr); } }
+    .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
+    .about-grid p { color: var(--ink-soft); margin-bottom: 18px; }
+    .about-grid strong { color: var(--ink); font-weight: 600; }
+    .timeline { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; }
+    .tl-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .tl-item:last-child { border-bottom: 0; }
+    .tl-year { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); white-space: nowrap; min-width: 76px; }
+    .tl-role { font-size: 14px; }
+    .tl-role b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
+    .tl-role span { color: var(--ink-dim); }
+    @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    /* ===== Process ===== */
+    #ablauf { border-top: 1px solid var(--line); }
+    .proc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .proc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; position: relative; }
+    .proc-step { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 800; color: var(--surface-2); line-height: 1; margin-bottom: 16px; }
+    .proc h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    .proc p { color: var(--ink-soft); font-size: 15px; }
+
+    /* ===== Testimonials ===== */
+    #stimmen { border-top: 1px solid var(--line); background: var(--bg-soft); }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+    .testi { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; }
+    .testi-stars { color: var(--accent-2); font-size: 16px; letter-spacing: 3px; margin-bottom: 16px; }
+    .testi-q { font-size: 1.05rem; line-height: 1.55; margin-bottom: 22px; flex-grow: 1; color: var(--ink); }
+    .testi-who { display: flex; align-items: center; gap: 13px; }
+    .testi-av { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; font-weight: 700; font-size: 15px; color: #fff; font-family: 'Sora', sans-serif; }
+    .testi-name { font-weight: 600; font-size: 15px; }
+    .testi-role { font-size: 13px; color: var(--ink-dim); }
+
+    /* ===== Contact ===== */
+    #kontakt { border-top: 1px solid var(--line); }
+    .cta-box { background: linear-gradient(150deg, rgba(91,140,255,.18), rgba(0,214,143,.1)); border: 1px solid rgba(91,140,255,.3); border-radius: 28px; padding: clamp(40px, 6vw, 76px); text-align: center; position: relative; overflow: hidden; }
+    .cta-box h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 18px; }
+    .cta-box p { color: var(--ink-soft); max-width: 50ch; margin: 0 auto 36px; font-size: 1.15rem; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-alt { margin-top: 26px; font-size: 15px; color: var(--ink-dim); }
+    .cta-alt a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ===== Footer ===== */
+    footer { position: relative; z-index: 1; border-top: 1px solid var(--line); padding: 40px 0; }
+    footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 14px; color: var(--ink-dim); }
+    .foot-links { display: flex; gap: 24px; font-size: 14px; }
+    .foot-links a { color: var(--ink-dim); transition: color .2s; }
+    .foot-links a:hover { color: var(--ink); }
+
+    /* reveal */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ===== EIN-/AUSBLENDEN VON SEKTIONEN =====
+       Eine Sektion mit der Klasse "section-off" wird komplett ausgeblendet.
+       Zum Ausblenden:  class="... section-off"  ans <section>-Tag schreiben.
+       Zum Einblenden:  "section-off" wieder entfernen. */
+    .section-off { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="#" class="logo">Moritz<b>.</b>Buch</a>
+      <div class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#warum">Warum ich</a>
+        <a href="#about">Über mich</a>
+        <a href="#kontakt" class="nav-cta">Gespräch anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">Freelance · Performance Marketing & E-Commerce</span>
+      <h1>Mehr Umsatz mit <span>System</span>. Mehr Klarheit durch <span>Struktur</span>.</h1>
+      <p class="lede">Ich unterstütze Geschäftsführer und Marketing-Teams dabei, profitabel zu wachsen – ob mehr Umsatz im E-Commerce oder mehr qualifizierte Leads für lokale Dienstleister, Praxen und B2B/B2C. Datenbasierte Strategie, operative Umsetzung und Wissensaufbau im Team.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Jetzt kostenloses Erstgespräch buchen</a>
+        <a href="#leistungen" class="btn-ghost">Wie ich arbeite →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="trust">
+    <div class="wrap">
+      <p>Stationen &amp; Kunden aus 9+ Jahren</p>
+      <div class="trust-logos">
+        <span>LEONARDO</span>
+        <span>Mighty-Kashoo</span>
+        <span>Tante Tina</span>
+        <span>Spoonful F&amp;B</span>
+        <span>GROESSIG Digital</span>
+        <span>Bros Company</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="leistungen">
+    <div class="wrap">
+      <span class="tag">Leistungen</span>
+      <h2 class="s-title">Strategisch gedacht. Operativ umgesetzt. AI-first.</h2>
+      <p class="s-intro">Kein Bauchladen, sondern aufeinander abgestimmte Bausteine entlang des gesamten Funnels – von der Strategie über die Creatives bis zum Dashboard, das deine Geschäftsziele sichtbar macht.</p>
+      <div class="svc-grid">
+        <div class="svc">
+          <span class="svc-num">01</span>
+          <h3>Paid Ads – Meta, Google &amp; mehr</h3>
+          <p>Operative Kampagnensteuerung auf Meta &amp; Google – ebenso TikTok, Pinterest &amp; Co. Welcher Kanal sich lohnt, entscheidet nicht der Trend, sondern die Strategie: Erst definieren wir deinen Zielkunden, dann den Kanal, der am besten auf deine Geschäftsziele einzahlt.</p>
+        </div>
+        <div class="svc feature">
+          <span class="svc-num">02 · AI-FIRST</span>
+          <h3>AI Creative-Produktion</h3>
+          <p>Statische Creatives passend zu deiner CI – auf Knopfdruck in großer Menge zum Testen. Kostengünstig und schnell geliefert: mehr Varianten, mehr Testing, geringere Stückkosten. So skaliert dein Creative-Output mit deinem Wachstum, ohne dass die Markenqualität leidet.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">03</span>
+          <h3>CRM &amp; E-Mail-Marketing</h3>
+          <p>E-Mail-Marketing im Top-Design: automatisierte Flows, Kampagnen und CRM-Strecken, die Bestandskunden aktivieren und Umsatz aus deiner bestehenden Liste holen – technisch sauber und gestalterisch hochwertig.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">04</span>
+          <h3>Content-Funnel &amp; Content-Pläne</h3>
+          <p>Content-Planung entlang eines klaren Funnels – das richtige Format zur richtigen Phase der Customer Journey. Inklusive fertiger Content-Pläne für dein Inhouse- oder Creative-Team, damit jeder Beitrag auf ein Ziel einzahlt statt zufällig zu performen.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">05</span>
+          <h3>Lead-Generierung – lokal &amp; B2B/B2C</h3>
+          <p>Mehr qualifizierte Anfragen für lokale Dienstleister, Arztpraxen und B2B/B2C-Unternehmen. Von der lokalen Sichtbarkeit bis zur Kampagne, die planbar Leads bringt – mit nachweisbaren Erfolgen statt leerer Reichweite.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">06</span>
+          <h3>Strategie &amp; Sparring</h3>
+          <p>Zielkunden-Definition, Kanalauswahl, Budgetverteilung und Roadmap – als strategischer Sparringspartner für Gründer und Marketing-Teams. Ehrliche Einschätzung, was sich lohnt und was nicht.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">07</span>
+          <h3>Teamentwicklung &amp; Enabling</h3>
+          <p>Ich befähige dein Inhouse-Team, Performance Marketing selbst zu beherrschen – aus der Praxis als Teamlead und als Dozent. Wissenstransfer statt Abhängigkeit.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">08</span>
+          <h3>Dashboards &amp; Reporting</h3>
+          <p>Automatisierte Reporting- und Dashboard-Strukturen für die Geschäftszielentwicklung. Entscheidungen auf Basis echter Daten – vom Tagesgeschäft bis zur Management-Ebene.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warum" style="border-top:1px solid var(--line);background:var(--bg-soft);">
+    <div class="wrap">
+      <span class="tag">Warum mit mir arbeiten</span>
+      <h2 class="s-title">Vier Gründe, die den Unterschied machen.</h2>
+      <div class="svc-grid" style="margin-top:48px;">
+        <div class="svc">
+          <span class="svc-num">→</span>
+          <h3>Performance ohne Blackbox</h3>
+          <p>Kampagnen mit klarem Reporting statt Rätselraten. Du verstehst jederzeit, was dein Budget tut und warum.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">→</span>
+          <h3>Strategie mit Blick fürs Ganze</h3>
+          <p>Forecasts, Budgets &amp; KPIs bottom-up gerechnet – damit Wachstum planbar wird und nicht auf Hoffnung basiert.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">→</span>
+          <h3>Inhouse Enablement</h3>
+          <p>Dein Team wird selbstständig – nicht abhängig. Ich gebe Wissen weiter, statt es für mich zu behalten.</p>
+        </div>
+        <div class="svc">
+          <span class="svc-num">→</span>
+          <h3>Automation &amp; Tracking</h3>
+          <p>Transparenz durch strukturierte, automatisierte Prozesse. Sauberes Tracking als Fundament jeder Entscheidung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="stat-bar">
+        <div class="stat"><span class="stat-num">9+</span><span class="stat-label">Jahre Erfahrung</span></div>
+        <div class="stat"><span class="stat-num">6 Mio. €+</span><span class="stat-label">gesteuertes Werbebudget</span></div>
+        <div class="stat"><span class="stat-num">[XX]+</span><span class="stat-label">Kundenprojekte</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Plattformen: Meta, Google, TikTok, Pinterest</span></div>
+      </div>
+      <div class="about-grid">
+        <div>
+          <span class="tag">Über mich</span>
+          <h2 class="s-title">Ich bin Moritz Buch.</h2>
+          <p style="font-size:1.2rem;color:var(--ink);font-weight:600;margin-bottom:24px;">Berater mit Praxis-Know-how und Hands-on-Mentalität.</p>
+          <p>Mit über <strong>9 Jahren Erfahrung</strong> im E-Commerce und digitalen Marketing habe ich mehr als <strong>6 Mio. € Werbebudget</strong> auf Meta, Google, TikTok &amp; Pinterest gesteuert. Ich liefere keine PowerPoint-Präsentationen, sondern <strong>echte Ergebnisse</strong> – während ich dein internes Team befähige, langfristig eigenständig zu agieren.</p>
+          <p>Bei jeder Maßnahme steht für mich das <strong>Kosten-Nutzen-Verhältnis</strong> im Vordergrund: Ich optimiere nicht auf Eitelkeits-Kennzahlen, sondern auf Deckungsbeitrag und echtes Wachstum. Als <strong>Teamlead</strong> bei LEONARDO und mit <strong>CMO-Erfahrung in zwei Startups im Growth Marketing</strong> habe ich gelernt, Budgets unternehmerisch zu denken.</p>
+          <p>Genauso wichtig: <strong>Teams führen und entwickeln</strong>. Ob als disziplinarische Führungskraft oder als <strong>Sparringspartner</strong> für Gründer und Inhouse-Teams – ich befähige Menschen, Performance Marketing selbst zu beherrschen, statt Abhängigkeiten zu schaffen. Mein Ansatz ist dabei durchgängig <strong>AI-first</strong>: KI für schnellere Creatives, automatisierte Prozesse und datenbasierte Entscheidungen.</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-year">2025 –</span><span class="tl-role"><b>Freelance Consultant & Dozent</b><span>Mehrere D2C-Kunden · GROESSIG, Spoonful, Tante Tina u. a.</span></span></div>
+          <div class="tl-item"><span class="tl-year">2024 –</span><span class="tl-role"><b>Strategie & Kampagnensteuerung</b><span>Mighty-Kashoo · Meta, Google, Influencer</span></span></div>
+          <div class="tl-item"><span class="tl-year">2023 – 25</span><span class="tl-role"><b>Teamlead Social, Performance & CRM</b><span>LEONARDO / glaskoch</span></span></div>
+          <div class="tl-item"><span class="tl-year">2020 – 23</span><span class="tl-role"><b>Teamlead Social Media</b><span>LEONARDO / glaskoch</span></span></div>
+          <div class="tl-item"><span class="tl-year">2016 – 20</span><span class="tl-role"><b>Social Media Manager</b><span>LEONARDO / glaskoch</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="wrap">
+      <span class="tag">So funktioniert's</span>
+      <h2 class="s-title">Dein Weg zu profitablem Marketing.</h2>
+      <p class="s-intro">Unkompliziert, transparent und ohne Agentur-Pingpong. Vom ersten Gespräch bis zur Umsetzung weißt du jederzeit, woran du bist.</p>
+      <div class="proc-grid">
+        <div class="proc">
+          <div class="proc-step">1</div>
+          <h3>Erstgespräch (30 Min)</h3>
+          <p>Ziele verstehen, Ist-Situation klären, Potenziale erkennen. Kostenlos und unverbindlich.</p>
+        </div>
+        <div class="proc">
+          <div class="proc-step">2</div>
+          <h3>Audit oder Strategie-Workshop</h3>
+          <p>Datenanalyse, Strukturcheck und erste konkrete Handlungsempfehlungen für dein Setup.</p>
+        </div>
+        <div class="proc">
+          <div class="proc-step">3</div>
+          <h3>Angebot &amp; Zieldefinition</h3>
+          <p>Operative Unterstützung, Retainer oder Team-Coaching – modular kombinierbar nach deinem Bedarf.</p>
+        </div>
+        <div class="proc">
+          <div class="proc-step">4</div>
+          <h3>Umsetzung</h3>
+          <p>Laufende Kampagnensteuerung, Workshops, Reports &amp; Team-Coaching – mit klarem Fokus aufs Ergebnis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BEWERTUNGEN / STIMMEN
+       ----------------------------------------------------------------
+       AUSBLENDEN:  schreibe  class="section-off"  in die Zeile unten
+                    -> <section id="stimmen" class="section-off">
+       EINBLENDEN:  entferne  class="section-off"  wieder
+                    -> <section id="stimmen">
+       Neue Bewertung: einen <div class="testi">…</div>-Block kopieren,
+       Text, Name und Rolle anpassen, Initialen in .testi-av eintragen.
+  ============================================================= -->
+  <section id="stimmen" class="section-off">
+    <div class="wrap">
+      <span class="tag">Stimmen</span>
+      <h2 class="s-title">Was Kundinnen und Kunden sagen.</h2>
+      <p class="s-intro">Echte Rückmeldungen aus der Zusammenarbeit.</p>
+      <div class="testi-grid">
+
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-q">„[Echte Kundenbewertung einfügen – idealerweise mit konkretem Ergebnis: Was war die Ausgangslage, was hat sich durch die Zusammenarbeit verändert?]"</p>
+          <div class="testi-who">
+            <div class="testi-av">[XY]</div>
+            <div>
+              <div class="testi-name">[Vorname Nachname]</div>
+              <div class="testi-role">[Rolle @ Firma]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-q">„[Zweite echte Kundenbewertung hier.]"</p>
+          <div class="testi-who">
+            <div class="testi-av">[XY]</div>
+            <div>
+              <div class="testi-name">[Vorname Nachname]</div>
+              <div class="testi-role">[Rolle @ Firma]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-q">„[Dritte echte Kundenbewertung hier.]"</p>
+          <div class="testi-who">
+            <div class="testi-av">[XY]</div>
+            <div>
+              <div class="testi-name">[Vorname Nachname]</div>
+              <div class="testi-role">[Rolle @ Firma]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2>Lass uns über dein Wachstum sprechen.</h2>
+        <p>Buch dir direkt ein kostenloses Kennenlerngespräch (30 Min). Wir klären deine Ziele, deine Ist-Situation und wo das größte Potenzial liegt.</p>
+
+        <!-- ===== Calendly Inline-Widget ===== -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/contact-moritz-buch/business-kennenlerngesprach?hide_gdpr_banner=1&background_color=181c23&text_color=f4f6f8&primary_color=5b8cff" style="min-width:320px;height:680px;border-radius:16px;overflow:hidden;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+        <p class="cta-alt">Lieber direkt? Schreib mir an <a href="mailto:contact@moritz-buch.com?subject=Anfrage%20Performance%20Marketing">contact@moritz-buch.com</a>, vernetz dich auf <a href="https://www.linkedin.com/in/moritz-buch-07b37b140/" target="_blank" rel="noopener">LinkedIn</a> oder ruf an: <a href="tel:+4917685635216">+49 176 856 352 16</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Moritz Buch · Performance Marketing &amp; E-Commerce</p>
+      <div class="foot-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('section .wrap > *, .svc, .proc, .testi, .timeline').forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>

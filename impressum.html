@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Moritz Buch</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0c0e12; --surface:#181c23; --ink:#f4f6f8; --ink-soft:#a8b0bd; --ink-dim:#6b7480; --accent:#5b8cff; --line:#262b34; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Instrument Sans',system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; font-size:17px; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+    h1,h2 { font-family:'Sora',sans-serif; letter-spacing:-0.02em; }
+    h1 { font-size:2.4rem; margin-bottom:8px; }
+    h2 { font-size:1.25rem; margin:36px 0 12px; }
+    a { color:var(--accent); }
+    nav { border-bottom:1px solid var(--line); padding:22px 0; }
+    nav .wrap { display:flex; justify-content:space-between; align-items:center; max-width:1120px; }
+    .logo { font-family:'Sora',sans-serif; font-weight:700; font-size:19px; color:var(--ink); text-decoration:none; letter-spacing:-0.03em; }
+    .logo b { color:var(--accent); }
+    .back { font-size:15px; color:var(--ink-soft); text-decoration:none; }
+    .back:hover { color:var(--ink); }
+    main { padding:70px 0 90px; }
+    p { color:var(--ink-soft); margin-bottom:10px; }
+    .tag { display:inline-block; font-size:13px; color:var(--accent); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:18px; font-family:'Sora',sans-serif; font-weight:600; }
+    footer { border-top:1px solid var(--line); padding:30px 0; }
+    footer .wrap { max-width:1120px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+    footer p, footer a { font-size:14px; color:var(--ink-dim); text-decoration:none; }
+    footer a:hover { color:var(--ink); }
+    .foot-links { display:flex; gap:22px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a href="/" class="logo">Moritz<b>.</b>Buch</a>
+      <a href="/" class="back">← Zurück zur Startseite</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <span class="tag">Rechtliches</span>
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>Moritz Buch<br />
+      Arnold-Janssen-Ring 12<br />
+      33014 Bad Driburg<br />
+      Deutschland</p>
+
+      <h2>Kontakt</h2>
+      <p>Telefon: +49 176 85635216<br />
+      E-Mail: <a href="mailto:contact@moritz-buch.com">contact@moritz-buch.com</a></p>
+
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
+      DE369077782</p>
+
+      <h2>Steuernummer</h2>
+      <p>326/5024/2632</p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Moritz Buch<br />
+      Arnold-Janssen-Ring 12<br />
+      33014 Bad Driburg</p>
+
+      <h2>EU-Streitschlichtung</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Meine E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+      <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Moritz Buch</p>
+      <div class="foot-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

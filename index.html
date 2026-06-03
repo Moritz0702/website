@@ -148,6 +148,17 @@
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(91,140,255,.4); }
     .btn-ghost { padding: 16px 24px; border-radius: 100px; border: 1px solid var(--line); font-weight: 600; color: var(--ink); transition: border-color .2s, background .2s; }
     .btn-ghost:hover { border-color: var(--ink-dim); background: var(--surface); }
+    /* split hero with portrait */
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 0.9fr; gap: 56px; align-items: center; }
+    .hero-copy { min-width: 0; }
+    .hero-media { position: relative; }
+    .hero-media img { width: 100%; height: auto; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+    .hero-media::before { content: ""; position: absolute; inset: -14%; z-index: -1; background: radial-gradient(closest-side, rgba(91,140,255,.30), rgba(0,214,143,.12), transparent 72%); filter: blur(32px); }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-media { max-width: 340px; margin: 4px auto 0; }
+      header { padding: 84px 0 72px; }
+    }
 
     /* ===== Marquee / trust ===== */
     .trust { position: relative; z-index: 1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; background: var(--bg-soft); }
@@ -190,6 +201,9 @@
     .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
     .about-grid p { color: var(--ink-soft); margin-bottom: 18px; }
     .about-grid strong { color: var(--ink); font-weight: 600; }
+    .about-side { display: flex; flex-direction: column; gap: 24px; }
+    .about-photo img { width: 100%; height: auto; border-radius: 16px; display: block; box-shadow: 0 16px 44px rgba(0,0,0,.45); }
+    @media (max-width: 800px) { .about-photo { max-width: 360px; } }
     .timeline { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; }
     .tl-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
     .tl-item:last-child { border-bottom: 0; }
@@ -272,13 +286,18 @@
   </nav>
 
   <header>
-    <div class="wrap">
-      <span class="eyebrow" data-i18n="hero.eyebrow">Freelance · Performance Marketing & E-Commerce</span>
-      <h1 data-i18n="hero.h1">Mehr Umsatz mit <span>System</span>. Mehr Klarheit durch <span>Struktur</span>.</h1>
-      <p class="lede" data-i18n="hero.lede">Ich helfe Unternehmen, mit digitalem Marketing planbar <strong>mehr Umsatz</strong> und <strong>mehr Kunden</strong> zu gewinnen – im E-Commerce, bei lokalen Dienstleistern, Praxen und im B2B/B2C. Datenbasierte Strategie, operative Umsetzung und Wissensaufbau im Team – aus über 10 Jahren Praxis.</p>
-      <div class="hero-actions">
-        <a href="#kontakt" class="btn-primary" data-i18n="hero.cta1">Jetzt kostenloses Erstgespräch buchen</a>
-        <a href="#leistungen" class="btn-ghost" data-i18n="hero.cta2">Wie ich arbeite →</a>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="hero.eyebrow">Freelance · Performance Marketing & E-Commerce</span>
+        <h1 data-i18n="hero.h1">Mehr Umsatz mit <span>System</span>. Mehr Klarheit durch <span>Struktur</span>.</h1>
+        <p class="lede" data-i18n="hero.lede">Ich helfe Unternehmen, mit digitalem Marketing planbar <strong>mehr Umsatz</strong> und <strong>mehr Kunden</strong> zu gewinnen – im E-Commerce, bei lokalen Dienstleistern, Praxen und im B2B/B2C. Datenbasierte Strategie, operative Umsetzung und Wissensaufbau im Team – aus über 10 Jahren Praxis.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn-primary" data-i18n="hero.cta1">Jetzt kostenloses Erstgespräch buchen</a>
+          <a href="#leistungen" class="btn-ghost" data-i18n="hero.cta2">Wie ich arbeite →</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/images/moritz.jpg" alt="Moritz Buch – Freelance Performance Marketing & E-Commerce" width="1000" height="1250" />
       </div>
     </div>
   </header>
@@ -409,13 +428,16 @@
           <p data-i18n="about.p3">Bei jeder Maßnahme steht das <strong>Kosten-Nutzen-Verhältnis</strong> im Vordergrund: Ich optimiere nicht auf Eitelkeits-Kennzahlen, sondern auf Deckungsbeitrag und echtes Wachstum. Als <strong>Dozent</strong> habe ich außerdem Mitarbeitende von Unternehmen im digitalen Marketing geschult und fit gemacht – Wissenstransfer statt Abhängigkeit.</p>
           <p data-i18n="about.p4">Genauso wichtig: <strong>Teams führen und entwickeln</strong>. Ob als disziplinarische Führungskraft oder als <strong>Sparringspartner</strong> für Gründer und Inhouse-Teams – ich befähige Menschen, Performance Marketing selbst zu beherrschen, statt Abhängigkeiten zu schaffen. Mein Ansatz ist dabei durchgängig <strong>AI-first</strong>: KI für schnellere Creatives, automatisierte Prozesse und datenbasierte Entscheidungen.</p>
         </div>
-        <div class="timeline">
-          <h3 class="tl-title" data-i18n="tl.title">Meine Schwerpunkte</h3>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role1"><b>Mehrjährige Führung als Teamlead</b><span>Social, Performance &amp; CRM</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role2"><b>CMO- &amp; Growth-Erfahrung in Startups</b><span>Strategie, Budget &amp; Skalierung</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role3"><b>Performance Marketing &amp; E-Commerce</b><span>Meta, Google, TikTok &amp; Pinterest</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role4"><b>Lead-Generierung</b><span>Lokale Unternehmen, Praxen &amp; B2B/B2C</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role5"><b>Dozent</b><span>Mitarbeiter-Schulungen im digitalen Marketing</span></span></div>
+        <div class="about-side">
+          <div class="about-photo"><img src="assets/images/moritz.jpg" alt="Moritz Buch" loading="lazy" width="1000" height="1250" /></div>
+          <div class="timeline">
+            <h3 class="tl-title" data-i18n="tl.title">Meine Schwerpunkte</h3>
+            <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role1"><b>Mehrjährige Führung als Teamlead</b><span>Social, Performance &amp; CRM</span></span></div>
+            <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role2"><b>CMO- &amp; Growth-Erfahrung in Startups</b><span>Strategie, Budget &amp; Skalierung</span></span></div>
+            <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role3"><b>Performance Marketing &amp; E-Commerce</b><span>Meta, Google, TikTok &amp; Pinterest</span></span></div>
+            <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role4"><b>Lead-Generierung</b><span>Lokale Unternehmen, Praxen &amp; B2B/B2C</span></span></div>
+            <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role" data-i18n="tl.role5"><b>Dozent</b><span>Mitarbeiter-Schulungen im digitalen Marketing</span></span></div>
+          </div>
         </div>
       </div>
     </div>

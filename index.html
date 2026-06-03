@@ -115,8 +115,10 @@
     /* ===== Marquee / trust ===== */
     .trust { position: relative; z-index: 1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; background: var(--bg-soft); }
     .trust p { text-align: center; font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-dim); margin-bottom: 18px; }
-    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; }
-    .trust-logos span { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--ink-soft); opacity: .8; }
+    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; }
+    .logo-chip { display: inline-grid; place-items: center; height: 60px; min-width: 120px; padding: 0 22px; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+    .logo-chip img { max-height: 34px; max-width: 150px; width: auto; object-fit: contain; display: block; }
+    .logo-chip--text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; color: #14171d; letter-spacing: -0.01em; }
 
     /* ===== Sections ===== */
     section { position: relative; z-index: 1; padding: 90px 0; }
@@ -137,7 +139,7 @@
 
     /* ===== About ===== */
     #about { border-top: 1px solid var(--line); }
-    .stat-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 64px; }
+    .stat-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 64px; }
     .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; text-align: center; }
     .stat-num { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
     .stat-label { font-size: 13px; color: var(--ink-soft); line-height: 1.4; }
@@ -233,12 +235,15 @@
     <div class="wrap">
       <p>Stationen &amp; Kunden aus 10+ Jahren</p>
       <div class="trust-logos">
-        <span>LEONARDO</span>
-        <span>Mighty-Kashoo</span>
-        <span>Tante Tina</span>
-        <span>Spoonful F&amp;B</span>
-        <span>GROESSIG Digital</span>
-        <span>Bros Company</span>
+        <span class="logo-chip"><img src="assets/logos/leonardo.png" alt="LEONARDO" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/groessig.png" alt="GROESSIG" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/spoonful.png" alt="Spoonful – Food &amp; Beverage Marketing" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/campnetic.png" alt="Campnetic" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/hofgut-stoecken.png" alt="Hofgut Stöcken" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/intermed.png" alt="InterMed Personal" loading="lazy" /></span>
+        <span class="logo-chip"><img src="assets/logos/cliik.png" alt="Cliik" loading="lazy" /></span>
+        <span class="logo-chip logo-chip--text">Tante Tina</span>
+        <span class="logo-chip logo-chip--text">Praxis Lia</span>
       </div>
     </div>
   </div>
@@ -328,7 +333,6 @@
         <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Jahre Erfahrung</span></div>
         <div class="stat"><span class="stat-num">6 Mio. €+</span><span class="stat-label">gesteuertes Werbebudget</span></div>
         <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Kundenprojekte</span></div>
-        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Plattformen: Meta, Google, TikTok, Pinterest</span></div>
       </div>
       <div class="about-grid">
         <div>
@@ -341,10 +345,10 @@
           <p>Genauso wichtig: <strong>Teams führen und entwickeln</strong>. Ob als disziplinarische Führungskraft oder als <strong>Sparringspartner</strong> für Gründer und Inhouse-Teams – ich befähige Menschen, Performance Marketing selbst zu beherrschen, statt Abhängigkeiten zu schaffen. Mein Ansatz ist dabei durchgängig <strong>AI-first</strong>: KI für schnellere Creatives, automatisierte Prozesse und datenbasierte Entscheidungen.</p>
         </div>
         <div class="timeline">
-          <h3 class="tl-title">Stationen &amp; Schwerpunkte</h3>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Teamlead bei LEONARDO</b><span>Social, Performance &amp; CRM · mehrjährige Führungsverantwortung</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Freelance Consultant</b><span>D2C- &amp; E-Commerce-Marken · GROESSIG, Spoonful, Tante Tina u. a.</span></span></div>
-          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Growth &amp; Strategie für Startups</b><span>CMO-Erfahrung · Meta, Google, Influencer</span></span></div>
+          <h3 class="tl-title">Meine Schwerpunkte</h3>
+          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Mehrjährige Führung als Teamlead</b><span>Social, Performance &amp; CRM</span></span></div>
+          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>CMO- &amp; Growth-Erfahrung in Startups</b><span>Strategie, Budget &amp; Skalierung</span></span></div>
+          <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Performance Marketing &amp; E-Commerce</b><span>Meta, Google, TikTok &amp; Pinterest</span></span></div>
           <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Lead-Generierung</b><span>Lokale Unternehmen, Praxen &amp; B2B/B2C</span></span></div>
           <div class="tl-item"><span class="tl-mark">›</span><span class="tl-role"><b>Dozent</b><span>Mitarbeiter-Schulungen im digitalen Marketing</span></span></div>
         </div>

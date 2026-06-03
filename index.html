@@ -65,7 +65,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
     body {
       font-family: 'Instrument Sans', system-ui, sans-serif;
       background: var(--bg);
@@ -92,9 +92,10 @@
     nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
     .logo { font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -0.03em; }
     .logo b { color: var(--accent); }
-    .nav-links { display: flex; gap: 30px; align-items: center; }
-    .nav-links a { font-size: 15px; color: var(--ink-soft); transition: color .2s; }
-    .nav-links a:hover { color: var(--ink); }
+    .nav-right { display: flex; align-items: center; gap: 22px; }
+    .nav-menu { display: flex; align-items: center; gap: 30px; }
+    .nav-menu a { font-size: 15px; color: var(--ink-soft); transition: color .2s; }
+    .nav-menu a:hover { color: var(--ink); }
     .nav-cta { background: var(--accent); color: #fff !important; padding: 10px 20px; border-radius: 100px; font-weight: 600; transition: transform .2s, box-shadow .2s; }
     .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(91,140,255,.35); }
     /* language switch */
@@ -102,7 +103,38 @@
     .lang-switch button { background: transparent; border: 0; color: var(--ink-soft); font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 100px; cursor: pointer; line-height: 1; transition: color .2s, background .2s; }
     .lang-switch button:hover { color: var(--ink); }
     .lang-switch button.active { background: var(--accent); color: #fff; }
-    @media (max-width: 760px) { .nav-links a:not(.nav-cta) { display: none; } }
+    /* hamburger toggle */
+    .nav-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 10px; background: transparent; cursor: pointer; padding: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 20px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* sticky mobile CTA */
+    .mobile-cta { display: none; }
+    @media (max-width: 760px) {
+      .nav-toggle { display: inline-flex; }
+      .nav-menu {
+        position: absolute; top: 70px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: rgba(12,14,18,.98); backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+        padding: 6px 24px 18px;
+        transform: translateY(-14px); opacity: 0; visibility: hidden;
+        transition: transform .25s ease, opacity .25s ease, visibility .25s;
+      }
+      .nav-menu.open { transform: none; opacity: 1; visibility: visible; }
+      .nav-menu a { font-size: 17px; padding: 15px 2px; border-bottom: 1px solid var(--line); }
+      .nav-menu a:last-child { border-bottom: 0; }
+      .nav-menu .nav-cta { margin-top: 16px; text-align: center; padding: 14px 20px; }
+      .mobile-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: block;
+        padding: 11px 16px calc(11px + env(safe-area-inset-bottom));
+        background: rgba(12,14,18,.92); backdrop-filter: blur(12px); border-top: 1px solid var(--line);
+        transform: translateY(0); transition: transform .3s ease; }
+      .mobile-cta.hidden { transform: translateY(130%); }
+      .mobile-cta a { display: block; text-align: center; background: var(--accent); color: #fff; font-weight: 600; padding: 15px; border-radius: 100px; font-size: 16px; }
+      body { padding-bottom: 72px; }
+      .cta-box { padding: 32px 18px; }
+    }
 
     /* ===== Hero ===== */
     header { position: relative; z-index: 1; padding: 110px 0 90px; }
@@ -139,7 +171,7 @@
 
     /* ===== Services ===== */
     #leistungen { border-top: 1px solid var(--line); }
-    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
     .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .25s, border-color .25s; position: relative; overflow: hidden; }
     .svc:hover { transform: translateY(-5px); border-color: var(--accent); }
     .svc-num { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 18px; display: block; }
@@ -171,7 +203,7 @@
 
     /* ===== Process ===== */
     #ablauf { border-top: 1px solid var(--line); }
-    .proc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .proc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
     .proc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; position: relative; }
     .proc-step { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 800; color: var(--surface-2); line-height: 1; margin-bottom: 16px; }
     .proc h3 { font-size: 1.25rem; margin-bottom: 10px; }
@@ -221,15 +253,20 @@
   <nav>
     <div class="wrap">
       <a href="#" class="logo">Moritz<b>.</b>Buch</a>
-      <div class="nav-links">
-        <a href="#leistungen" data-i18n="nav.services">Leistungen</a>
-        <a href="#warum" data-i18n="nav.why">Warum ich</a>
-        <a href="#about" data-i18n="nav.about">Über mich</a>
-        <a href="#kontakt" class="nav-cta" data-i18n="nav.cta">Gespräch anfragen</a>
+      <div class="nav-right">
+        <div class="nav-menu" id="nav-menu">
+          <a href="#leistungen" data-i18n="nav.services">Leistungen</a>
+          <a href="#warum" data-i18n="nav.why">Warum ich</a>
+          <a href="#about" data-i18n="nav.about">Über mich</a>
+          <a href="#kontakt" class="nav-cta" data-i18n="nav.cta">Gespräch anfragen</a>
+        </div>
         <div class="lang-switch" role="group" aria-label="Sprache / Language">
           <button type="button" data-lang="de">DE</button>
           <button type="button" data-lang="en">EN</button>
         </div>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -478,7 +515,7 @@
         <p data-i18n="cta.text">Buch dir direkt ein kostenloses Kennenlerngespräch (30 Min). Wir klären deine Ziele, deine Ist-Situation und wo das größte Potenzial liegt.</p>
 
         <!-- ===== Calendly Inline-Widget ===== -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/contact-moritz-buch/business-kennenlerngesprach?hide_gdpr_banner=1&background_color=181c23&text_color=f4f6f8&primary_color=5b8cff" style="min-width:320px;height:680px;border-radius:16px;overflow:hidden;"></div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/contact-moritz-buch/business-kennenlerngesprach?hide_gdpr_banner=1&background_color=181c23&text_color=f4f6f8&primary_color=5b8cff" style="min-width:0;width:100%;height:680px;border-radius:16px;overflow:hidden;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
         <p class="cta-alt" data-i18n="cta.alt">Lieber direkt? Schreib mir an <a href="mailto:contact@moritz-buch.com?subject=Anfrage%20Performance%20Marketing">contact@moritz-buch.com</a>, vernetz dich auf <a href="https://www.linkedin.com/in/moritz-buch-07b37b140/" target="_blank" rel="noopener">LinkedIn</a> oder ruf an: <a href="tel:+4917685635216">+49 176 856 352 16</a></p>
@@ -495,6 +532,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Fixe CTA-Leiste nur auf Mobil -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a href="#kontakt" data-i18n="cta.sticky">Kostenloses Erstgespräch buchen</a>
+  </div>
 
   <script>
     // ===== Sprachumschalter (DE Standard im HTML, EN aus Woerterbuch) =====
@@ -570,7 +612,8 @@
         'cta.text': `Book a free intro call (30 min) right away. We'll clarify your goals, your current situation and where the greatest potential lies.`,
         'cta.alt': `Prefer to reach out directly? Email me at <a href="mailto:contact@moritz-buch.com?subject=Performance%20Marketing%20enquiry">contact@moritz-buch.com</a>, connect on <a href="https://www.linkedin.com/in/moritz-buch-07b37b140/" target="_blank" rel="noopener">LinkedIn</a> or call: <a href="tel:+4917685635216">+49 176 856 352 16</a>`,
         'foot.imprint': `Imprint`,
-        'foot.privacy': `Privacy`
+        'foot.privacy': `Privacy`,
+        'cta.sticky': `Book your free intro call`
       };
 
       const nodes = document.querySelectorAll('[data-i18n]');
@@ -608,6 +651,33 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ===== Mobiles Menue (Burger) =====
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      const closeMenu = () => {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      };
+      navToggle.addEventListener('click', () => {
+        const open = navMenu.classList.toggle('open');
+        navToggle.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    // ===== Sticky-CTA ausblenden, sobald Kontaktbereich sichtbar ist =====
+    const mobileCta = document.getElementById('mobile-cta');
+    const kontaktSec = document.getElementById('kontakt');
+    if (mobileCta && kontaktSec && 'IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => mobileCta.classList.toggle('hidden', e.isIntersecting));
+      }, { threshold: 0.05 }).observe(kontaktSec);
+    }
   </script>
 
 </body>

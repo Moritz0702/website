@@ -115,11 +115,16 @@
     /* ===== Marquee / trust ===== */
     .trust { position: relative; z-index: 1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; background: var(--bg-soft); }
     .trust p { text-align: center; font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-dim); margin-bottom: 18px; }
-    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; }
-    .logo-chip { display: grid; place-items: center; width: 150px; height: 66px; padding: 12px 18px; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.22); }
-    .logo-chip img { max-height: 38px; max-width: 116px; width: auto; object-fit: contain; display: block; }
+    .logo-marquee { position: relative; overflow: hidden; margin-top: 22px;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+    .logo-track { display: flex; align-items: center; gap: 14px; width: max-content; animation: logo-scroll 40s linear infinite; }
+    .logo-marquee:hover .logo-track { animation-play-state: paused; }
+    @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .logo-chip { flex: 0 0 auto; display: grid; place-items: center; width: 160px; height: 70px; padding: 12px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.22); }
+    .logo-chip img { max-height: 40px; max-width: 120px; width: auto; object-fit: contain; display: block; }
     .logo-chip--text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; color: #14171d; letter-spacing: -0.01em; }
-    @media (max-width: 760px) { .logo-chip { width: 132px; height: 60px; } }
+    @media (prefers-reduced-motion: reduce) { .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; } }
 
     /* ===== Sections ===== */
     section { position: relative; z-index: 1; padding: 90px 0; }
@@ -235,16 +240,29 @@
   <div class="trust">
     <div class="wrap">
       <p>Stationen &amp; Kunden aus 10+ Jahren</p>
-      <div class="trust-logos">
-        <span class="logo-chip"><img src="assets/logos/leonardo.png" alt="LEONARDO" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/groessig.png" alt="GROESSIG" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/spoonful.png" alt="Spoonful – Food &amp; Beverage Marketing" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/campnetic.png" alt="Campnetic" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/hofgut-stoecken.png" alt="Hofgut Stöcken" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/intermed.png" alt="InterMed Personal" loading="lazy" /></span>
-        <span class="logo-chip"><img src="assets/logos/cliik.png" alt="Cliik" loading="lazy" /></span>
-        <span class="logo-chip logo-chip--text">Tante Tina</span>
-        <span class="logo-chip logo-chip--text">Praxis Lia</span>
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <!-- Set 1 -->
+          <span class="logo-chip"><img src="assets/logos/leonardo.png" alt="LEONARDO" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/groessig.png" alt="GROESSIG" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/spoonful.png" alt="Spoonful – Food &amp; Beverage Marketing" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/campnetic.png" alt="Campnetic" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/hofgut-stoecken.png" alt="Hofgut Stöcken" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/intermed.png" alt="InterMed Personal" loading="lazy" /></span>
+          <span class="logo-chip"><img src="assets/logos/cliik.png" alt="Cliik" loading="lazy" /></span>
+          <span class="logo-chip logo-chip--text">Tante Tina</span>
+          <span class="logo-chip logo-chip--text">Praxis Lia</span>
+          <!-- Set 2 (Duplikat fuer nahtlose Endlosschleife) -->
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/leonardo.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/groessig.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/spoonful.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/campnetic.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/hofgut-stoecken.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/intermed.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/cliik.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip logo-chip--text" aria-hidden="true">Tante Tina</span>
+          <span class="logo-chip logo-chip--text" aria-hidden="true">Praxis Lia</span>
+        </div>
       </div>
     </div>
   </div>

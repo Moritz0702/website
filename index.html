@@ -115,10 +115,11 @@
     /* ===== Marquee / trust ===== */
     .trust { position: relative; z-index: 1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; background: var(--bg-soft); }
     .trust p { text-align: center; font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-dim); margin-bottom: 18px; }
-    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; }
-    .logo-chip { display: inline-grid; place-items: center; height: 60px; min-width: 120px; padding: 0 22px; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
-    .logo-chip img { max-height: 34px; max-width: 150px; width: auto; object-fit: contain; display: block; }
-    .logo-chip--text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; color: #14171d; letter-spacing: -0.01em; }
+    .trust-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; }
+    .logo-chip { display: grid; place-items: center; width: 150px; height: 66px; padding: 12px 18px; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.22); }
+    .logo-chip img { max-height: 38px; max-width: 116px; width: auto; object-fit: contain; display: block; }
+    .logo-chip--text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; color: #14171d; letter-spacing: -0.01em; }
+    @media (max-width: 760px) { .logo-chip { width: 132px; height: 60px; } }
 
     /* ===== Sections ===== */
     section { position: relative; z-index: 1; padding: 90px 0; }

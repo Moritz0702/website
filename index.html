@@ -172,6 +172,8 @@
     .logo-chip { flex: 0 0 auto; display: grid; place-items: center; width: 160px; height: 70px; padding: 12px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.22); }
     .logo-chip img { max-height: 40px; max-width: 120px; width: auto; object-fit: contain; display: block; }
     .logo-chip--text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; color: #14171d; letter-spacing: -0.01em; }
+    .logo-chip--lockup { padding: 6px 16px; }
+    .logo-chip--lockup img { max-height: 58px; max-width: 96px; }
     @media (prefers-reduced-motion: reduce) { .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; } }
 
     /* ===== Sections ===== */
@@ -308,7 +310,7 @@
       <div class="logo-marquee">
         <div class="logo-track">
           <!-- Set 1 -->
-          <span class="logo-chip"><img src="assets/logos/leonardo.png" alt="LEONARDO" loading="lazy" /></span>
+          <span class="logo-chip logo-chip--lockup"><img src="assets/logos/leonardo.png" alt="LEONARDO" loading="lazy" /></span>
           <span class="logo-chip"><img src="assets/logos/groessig.png" alt="GROESSIG" loading="lazy" /></span>
           <span class="logo-chip"><img src="assets/logos/spoonful.png" alt="Spoonful – Food &amp; Beverage Marketing" loading="lazy" /></span>
           <span class="logo-chip"><img src="assets/logos/campnetic.png" alt="Campnetic" loading="lazy" /></span>
@@ -318,7 +320,7 @@
           <span class="logo-chip logo-chip--text">Tante Tina</span>
           <span class="logo-chip logo-chip--text">Praxis Lia</span>
           <!-- Set 2 (Duplikat fuer nahtlose Endlosschleife) -->
-          <span class="logo-chip" aria-hidden="true"><img src="assets/logos/leonardo.png" alt="" loading="lazy" /></span>
+          <span class="logo-chip logo-chip--lockup" aria-hidden="true"><img src="assets/logos/leonardo.png" alt="" loading="lazy" /></span>
           <span class="logo-chip" aria-hidden="true"><img src="assets/logos/groessig.png" alt="" loading="lazy" /></span>
           <span class="logo-chip" aria-hidden="true"><img src="assets/logos/spoonful.png" alt="" loading="lazy" /></span>
           <span class="logo-chip" aria-hidden="true"><img src="assets/logos/campnetic.png" alt="" loading="lazy" /></span>

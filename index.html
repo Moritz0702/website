@@ -241,7 +241,11 @@
     #stimmen { border-top: 1px solid var(--line); background: var(--bg-soft); }
     .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
     .testi { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; }
-    .testi-stars { color: var(--accent-2); font-size: 16px; letter-spacing: 3px; margin-bottom: 16px; }
+    .testi-stars { color: #fbbc04; font-size: 16px; letter-spacing: 3px; margin-bottom: 16px; }
+    .rating-badge { display: inline-flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 100px; padding: 11px 22px; margin-bottom: 46px; }
+    .rating-badge .stars { color: #fbbc04; font-size: 18px; letter-spacing: 2px; }
+    .rating-badge .txt { font-size: 15px; color: var(--ink-soft); }
+    .rating-badge .txt strong { color: var(--ink); font-weight: 700; }
     .testi-q { font-size: 1.05rem; line-height: 1.55; margin-bottom: 22px; flex-grow: 1; color: var(--ink); }
     .testi-who { display: flex; align-items: center; gap: 13px; }
     .testi-av { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; font-weight: 700; font-size: 15px; color: #fff; font-family: 'Sora', sans-serif; }
@@ -523,6 +527,10 @@
       <span class="tag" data-i18n="stimmen.tag">Stimmen</span>
       <h2 class="s-title" data-i18n="stimmen.title">Was Kundinnen und Kunden sagen.</h2>
       <p class="s-intro" data-i18n="stimmen.intro">Echte Google-Bewertungen aus der Zusammenarbeit.</p>
+      <div class="rating-badge">
+        <span class="stars">★★★★★</span>
+        <span class="txt" data-i18n="stimmen.rating"><strong>5,0 von 5</strong> · Google-Bewertungen</span>
+      </div>
       <div class="testi-grid">
 
         <div class="testi">
@@ -669,6 +677,7 @@
         'stimmen.title': `What clients say.`,
         'stimmen.intro': `Real Google reviews from working together.`,
         'stimmen.cta': `★ See all reviews on Google`,
+        'stimmen.rating': `<strong>5.0 out of 5</strong> · Google reviews`,
         'nav.cta': `Book a call`,
         'hero.eyebrow': `Moritz Buch · Performance Marketing & E-Commerce`,
         'hero.h1': `More revenue through <span>system</span>. More clarity through <span>structure</span>.`,

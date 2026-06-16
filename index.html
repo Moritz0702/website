@@ -256,6 +256,26 @@
     .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .cta-alt { margin-top: 26px; font-size: 15px; color: var(--ink-dim); }
     .cta-alt a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+    /* contact: calendly + form side by side */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; text-align: left; margin-top: 30px; }
+    .contact-col { display: flex; flex-direction: column; }
+    .contact-h { font-size: 1.1rem; margin-bottom: 14px; color: var(--ink); }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form label { font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 6px; display: block; }
+    .contact-form input, .contact-form textarea { width: 100%; background: rgba(12,14,18,.6); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; color: var(--ink); font-family: inherit; font-size: 15px; transition: border-color .2s; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-consent { display: flex; gap: 9px; align-items: flex-start; font-size: 13px; color: var(--ink-dim); font-weight: 400; }
+    .contact-consent input { width: auto; margin-top: 3px; flex: 0 0 auto; }
+    .contact-consent a { color: var(--ink-soft); text-decoration: underline; }
+    .contact-form button { background: var(--accent); color: #fff; border: 0; padding: 15px; border-radius: 100px; font-weight: 600; font-size: 16px; cursor: pointer; transition: transform .2s, box-shadow .2s; font-family: 'Sora', sans-serif; }
+    .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(91,140,255,.4); }
+    .contact-form button:disabled { opacity: .6; cursor: default; transform: none; box-shadow: none; }
+    .form-status { font-size: 14px; min-height: 20px; margin-top: 2px; }
+    .form-status.ok { color: var(--accent-2); }
+    .form-status.err { color: #ff6b6b; }
+    .hp-field { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    @media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
 
     /* ===== Footer ===== */
     footer { position: relative; z-index: 1; border-top: 1px solid var(--line); padding: 40px 0; }
@@ -550,9 +570,44 @@
         <h2 data-i18n="cta.title">Lass uns über dein Wachstum sprechen.</h2>
         <p data-i18n="cta.text">Buch dir direkt ein kostenloses Kennenlerngespräch (30 Min). Wir klären deine Ziele, deine Ist-Situation und wo das größte Potenzial liegt.</p>
 
-        <!-- ===== Calendly Inline-Widget ===== -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/contact-moritz-buch/business-kennenlerngesprach?hide_gdpr_banner=1&background_color=181c23&text_color=f4f6f8&primary_color=5b8cff" style="min-width:0;width:100%;height:680px;border-radius:16px;overflow:hidden;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <div class="contact-grid">
+          <!-- Spalte 1: Calendly -->
+          <div class="contact-col">
+            <h3 class="contact-h" data-i18n="contact.book">Termin buchen</h3>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/contact-moritz-buch/business-kennenlerngesprach?hide_gdpr_banner=1&background_color=181c23&text_color=f4f6f8&primary_color=5b8cff" style="min-width:0;width:100%;height:680px;border-radius:16px;overflow:hidden;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+          <!-- Spalte 2: Kontaktformular (Web3Forms) -->
+          <div class="contact-col">
+            <h3 class="contact-h" data-i18n="contact.write">Oder schreib mir direkt</h3>
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- WICHTIG: hier den Web3Forms Access-Key eintragen -->
+              <input type="hidden" name="access_key" value="899ea96c-32a1-4c68-8179-8bc736dbadd7" />
+              <input type="hidden" name="subject" value="Neue Kontaktanfrage über moritz-buch.com" />
+              <input type="hidden" name="from_name" value="moritz-buch.com Kontaktformular" />
+              <!-- Spamschutz (Honeypot) -->
+              <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <div>
+                <label for="cf-name" data-i18n="form.name">Name</label>
+                <input id="cf-name" type="text" name="name" required data-i18n-ph="form.name_ph" placeholder="Dein Name" />
+              </div>
+              <div>
+                <label for="cf-email" data-i18n="form.email">E-Mail</label>
+                <input id="cf-email" type="email" name="email" required data-i18n-ph="form.email_ph" placeholder="deine@email.de" />
+              </div>
+              <div>
+                <label for="cf-msg" data-i18n="form.msg">Nachricht</label>
+                <textarea id="cf-msg" name="message" required data-i18n-ph="form.msg_ph" placeholder="Worum geht's?"></textarea>
+              </div>
+              <label class="contact-consent">
+                <input type="checkbox" required />
+                <span data-i18n="form.consent">Ich bin mit der Verarbeitung meiner Daten gemäß <a href="/datenschutz.html">Datenschutzerklärung</a> einverstanden.</span>
+              </label>
+              <button type="submit" data-i18n="form.submit">Nachricht senden</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
 
         <p class="cta-alt" data-i18n="cta.alt">Lieber direkt? Schreib mir an <a href="mailto:contact@moritz-buch.com?subject=Anfrage%20Performance%20Marketing">contact@moritz-buch.com</a>, vernetz dich auf <a href="https://www.linkedin.com/in/moritz-buch-07b37b140/" target="_blank" rel="noopener">LinkedIn</a> oder ruf an: <a href="tel:+4917685635216">+49 176 856 352 16</a></p>
       </div>
@@ -649,12 +704,25 @@
         'cta.alt': `Prefer to reach out directly? Email me at <a href="mailto:contact@moritz-buch.com?subject=Performance%20Marketing%20enquiry">contact@moritz-buch.com</a>, connect on <a href="https://www.linkedin.com/in/moritz-buch-07b37b140/" target="_blank" rel="noopener">LinkedIn</a> or call: <a href="tel:+4917685635216">+49 176 856 352 16</a>`,
         'foot.imprint': `Imprint`,
         'foot.privacy': `Privacy`,
-        'cta.sticky': `Book your free intro call`
+        'cta.sticky': `Book your free intro call`,
+        'contact.book': `Book a call`,
+        'contact.write': `Or send me a message`,
+        'form.name': `Name`,
+        'form.name_ph': `Your name`,
+        'form.email': `Email`,
+        'form.email_ph': `you@email.com`,
+        'form.msg': `Message`,
+        'form.msg_ph': `What's it about?`,
+        'form.consent': `I agree to my data being processed in accordance with the <a href="/datenschutz.html">privacy policy</a>.`,
+        'form.submit': `Send message`
       };
 
       const nodes = document.querySelectorAll('[data-i18n]');
       const DE = {};
       nodes.forEach(function (el) { DE[el.getAttribute('data-i18n')] = el.innerHTML; });
+      const phNodes = document.querySelectorAll('[data-i18n-ph]');
+      const DEph = {};
+      phNodes.forEach(function (el) { DEph[el.getAttribute('data-i18n-ph')] = el.getAttribute('placeholder') || ''; });
       const dicts = { de: DE, en: EN };
       const buttons = document.querySelectorAll('.lang-switch button');
 
@@ -664,6 +732,11 @@
           const key = el.getAttribute('data-i18n');
           const val = (dict[key] != null) ? dict[key] : DE[key];
           if (val != null) el.innerHTML = val;
+        });
+        phNodes.forEach(function (el) {
+          const key = el.getAttribute('data-i18n-ph');
+          const val = (dict[key] != null) ? dict[key] : DEph[key];
+          if (val != null) el.setAttribute('placeholder', val);
         });
         document.documentElement.lang = lang;
         buttons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-lang') === lang); });
@@ -713,6 +786,41 @@
       new IntersectionObserver((entries) => {
         entries.forEach(e => mobileCta.classList.toggle('hidden', e.isIntersecting));
       }, { threshold: 0.05 }).observe(kontaktSec);
+    }
+
+    // ===== Kontaktformular (Web3Forms, AJAX) =====
+    const cform = document.getElementById('contact-form');
+    if (cform) {
+      const statusEl = document.getElementById('form-status');
+      const MSG = {
+        de: { sending: 'Wird gesendet …', ok: 'Danke! Deine Nachricht ist angekommen – ich melde mich zeitnah bei dir.', err: 'Das hat leider nicht geklappt. Bitte versuch es erneut oder schreib direkt an contact@moritz-buch.com.' },
+        en: { sending: 'Sending …', ok: 'Thanks! Your message has arrived – I will get back to you shortly.', err: 'That did not work. Please try again or email contact@moritz-buch.com directly.' }
+      };
+      cform.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const lang = (document.documentElement.lang === 'en') ? 'en' : 'de';
+        const btn = cform.querySelector('button[type="submit"]');
+        statusEl.className = 'form-status';
+        statusEl.textContent = MSG[lang].sending;
+        btn.disabled = true;
+        try {
+          const res = await fetch(cform.action, { method: 'POST', body: new FormData(cform), headers: { 'Accept': 'application/json' } });
+          const json = await res.json().catch(function () { return {}; });
+          if (res.ok && json.success) {
+            statusEl.textContent = MSG[lang].ok;
+            statusEl.classList.add('ok');
+            cform.reset();
+          } else {
+            statusEl.textContent = MSG[lang].err;
+            statusEl.classList.add('err');
+          }
+        } catch (err) {
+          statusEl.textContent = MSG[lang].err;
+          statusEl.classList.add('err');
+        } finally {
+          btn.disabled = false;
+        }
+      });
     }
   </script>
 

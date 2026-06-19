@@ -10,6 +10,7 @@
   <meta name="keywords" content="Performance Marketing Freelancer, Meta Ads, Google Ads, Lead-Generierung, Leads für Arztpraxen, lokales Marketing, B2B Leadgenerierung, E-Commerce Beratung, AI Creatives, CRM, E-Mail-Marketing, TikTok Ads" />
   <meta name="author" content="Moritz Buch" />
   <meta name="robots" content="index, follow" />
+  <meta name="facebook-domain-verification" content="c7zvu1c11fsjq31ta74vil1ps4fwf1" />
   <link rel="canonical" href="https://www.moritz-buch.com/" />
 
   <!-- Favicons -->
@@ -59,6 +60,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="/assets/consent.js" defer></script>
 
   <style>
     :root {
@@ -927,6 +929,7 @@
             statusEl.textContent = MSG[lang].ok;
             statusEl.classList.add('ok');
             cform.reset();
+            if (window.mbTrackLead) window.mbTrackLead();
           } else {
             statusEl.textContent = MSG[lang].err;
             statusEl.classList.add('err');

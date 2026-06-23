@@ -232,6 +232,13 @@
     .svc p { color: var(--ink-soft); font-size: 15px; }
     .svc.feature { background: linear-gradient(160deg, rgba(91,140,255,.12), var(--surface)); border-color: rgba(91,140,255,.3); }
     .svc.feature .svc-num { color: var(--accent-2); }
+    .svc-icon { display: inline-flex; color: var(--accent); margin-bottom: 18px; }
+    .svc-icon svg { width: 30px; height: 30px; }
+    .svc.feature .svc-icon { color: var(--accent-2); }
+    .svc-platforms { display: flex; align-items: center; gap: 13px; margin-bottom: 18px; flex-wrap: wrap; }
+    .pglyph { display: inline-block; width: 22px; height: 22px; background: var(--ink-soft); transition: background .2s ease;
+      -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
+    .svc:hover .pglyph { background: var(--ink); }
 
     /* ===== About ===== */
     #about { border-top: 1px solid var(--line); }
@@ -406,42 +413,47 @@
       <p class="s-intro" data-i18n="svc.intro">Kein Bauchladen, sondern aufeinander abgestimmte Bausteine entlang des gesamten Funnels – von der Strategie über die Creatives bis zum Dashboard, das deine Geschäftsziele sichtbar macht.</p>
       <div class="svc-grid">
         <div class="svc">
-          <span class="svc-num">01</span>
+          <span class="svc-platforms" aria-hidden="true">
+            <span class="pglyph" style="-webkit-mask-image:url(/assets/icons/meta.svg);mask-image:url(/assets/icons/meta.svg)"></span>
+            <span class="pglyph" style="-webkit-mask-image:url(/assets/icons/google.svg);mask-image:url(/assets/icons/google.svg)"></span>
+            <span class="pglyph" style="-webkit-mask-image:url(/assets/icons/tiktok.svg);mask-image:url(/assets/icons/tiktok.svg)"></span>
+            <span class="pglyph" style="-webkit-mask-image:url(/assets/icons/pinterest.svg);mask-image:url(/assets/icons/pinterest.svg)"></span>
+          </span>
           <h3 data-i18n="svc1.h">Paid Ads – Meta, Google &amp; mehr</h3>
           <p data-i18n="svc1.p">Operative Kampagnensteuerung auf Meta &amp; Google – ebenso TikTok, Pinterest &amp; Co. Welcher Kanal sich lohnt, entscheidet nicht der Trend, sondern die Strategie: Erst definieren wir deinen Zielkunden, dann den Kanal, der am besten auf deine Geschäftsziele einzahlt.</p>
         </div>
         <div class="svc feature">
-          <span class="svc-num">02 · AI-FIRST</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15l-1.8-4.2L5.5 9l4.7-1.3L12 3z"/><path d="M18.5 14.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8.8-2.1z"/></svg></span>
           <h3 data-i18n="svc2.h">AI Creative-Produktion</h3>
           <p data-i18n="svc2.p">Statische Creatives passend zu deiner CI – auf Knopfdruck in großer Menge zum Testen. Kostengünstig und schnell geliefert: mehr Varianten, mehr Testing, geringere Stückkosten. So skaliert dein Creative-Output mit deinem Wachstum, ohne dass die Markenqualität leidet.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">03</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span>
           <h3 data-i18n="svc3.h">CRM &amp; E-Mail-Marketing</h3>
           <p data-i18n="svc3.p">E-Mail-Marketing im Top-Design: automatisierte Flows, Kampagnen und CRM-Strecken, die Bestandskunden aktivieren und Umsatz aus deiner bestehenden Liste holen – technisch sauber und gestalterisch hochwertig.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">04</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-6 7.5V19l-4-2.2v-5.3L4 4z"/></svg></span>
           <h3 data-i18n="svc4.h">Content-Funnel &amp; Content-Pläne</h3>
           <p data-i18n="svc4.p">Content-Planung entlang eines klaren Funnels – das richtige Format zur richtigen Phase der Customer Journey. Inklusive fertiger Content-Pläne für dein Inhouse- oder Creative-Team, damit jeder Beitrag auf ein Ziel einzahlt statt zufällig zu performen.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">05</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M19 8v5M16.5 10.5h5"/></svg></span>
           <h3 data-i18n="svc5.h">Lead-Generierung – lokal &amp; B2B/B2C</h3>
           <p data-i18n="svc5.p">Mehr qualifizierte Anfragen für lokale Dienstleister, Arztpraxen und B2B/B2C-Unternehmen. Von der lokalen Sichtbarkeit bis zur Kampagne, die planbar Leads bringt – mit nachweisbaren Erfolgen statt leerer Reichweite.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">06</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/></svg></span>
           <h3 data-i18n="svc6.h">Strategie &amp; Sparring</h3>
           <p data-i18n="svc6.p">Zielkunden-Definition, Kanalauswahl, Budgetverteilung und Roadmap – als strategischer Sparringspartner für Gründer und Marketing-Teams. Ehrliche Einschätzung, was sich lohnt und was nicht.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">07</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="9" r="2.8"/><circle cx="16.5" cy="10" r="2.3"/><path d="M3.5 19a5 5 0 0 1 10 0"/><path d="M14.5 19a4.5 4.5 0 0 1 6.5-3.2"/></svg></span>
           <h3 data-i18n="svc7.h">Teamentwicklung &amp; Enabling</h3>
           <p data-i18n="svc7.p">Ich befähige dein Inhouse-Team, Performance Marketing selbst zu beherrschen – aus der Praxis als Teamlead und als Dozent. Wissenstransfer statt Abhängigkeit.</p>
         </div>
         <div class="svc">
-          <span class="svc-num">08</span>
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="8" rx="1"/><rect x="10.5" y="6" width="3" height="13" rx="1"/><rect x="16" y="14" width="3" height="5" rx="1"/></svg></span>
           <h3 data-i18n="svc8.h">Dashboards &amp; Reporting</h3>
           <p data-i18n="svc8.p">Automatisierte Reporting- und Dashboard-Strukturen für die Geschäftszielentwicklung. Entscheidungen auf Basis echter Daten – vom Tagesgeschäft bis zur Management-Ebene.</p>
         </div>

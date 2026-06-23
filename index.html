@@ -95,10 +95,11 @@
 
     /* glow background */
     body::before {
-      content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      content: ""; position: fixed; inset: -12%; z-index: 0; pointer-events: none; will-change: transform;
       background:
         radial-gradient(700px circle at 20% -5%, rgba(91,140,255,.12), transparent 55%),
         radial-gradient(600px circle at 95% 5%, rgba(0,214,143,.08), transparent 50%);
+      animation: mb-aurora 22s ease-in-out infinite alternate;
     }
 
     /* ===== Nav ===== */
@@ -155,7 +156,7 @@
     .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; color: var(--accent-2); font-weight: 600; background: rgba(0,214,143,.08); border: 1px solid rgba(0,214,143,.2); padding: 7px 16px; border-radius: 100px; margin-bottom: 30px; }
     .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); }
     header h1 { font-size: clamp(2.6rem, 6.5vw, 5rem); max-width: 17ch; margin-bottom: 26px; font-weight: 800; }
-    header h1 span { background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    header h1 span { background: linear-gradient(120deg, var(--accent), var(--accent-2), var(--accent)); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: mb-shimmer 7s linear infinite; }
     .lede { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 56ch; margin-bottom: 40px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
     .btn-primary { background: var(--accent); color: #fff; padding: 16px 32px; border-radius: 100px; font-weight: 600; font-size: 16px; transition: transform .2s, box-shadow .2s; }
@@ -172,6 +173,22 @@
       .hero-grid { grid-template-columns: 1fr; gap: 34px; }
       .hero-media { max-width: 340px; margin: 4px auto 0; }
       header { padding: 84px 0 72px; }
+    }
+
+    /* ===== Wow: Animationen (GPU-schonend) ===== */
+    @keyframes mb-aurora { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-4%,3%,0) scale(1.08); } }
+    @keyframes mb-shimmer { to { background-position: 220% center; } }
+    @keyframes mb-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    .hero-copy > * { opacity: 0; animation: mb-fade-up .6s cubic-bezier(.2,.7,.2,1) both; }
+    .hero-copy .eyebrow { animation-delay: .05s; }
+    .hero-copy h1 { animation-delay: .15s; }
+    .hero-copy .lede { animation-delay: .30s; }
+    .hero-copy .hero-actions { animation-delay: .42s; }
+    .hero-media { opacity: 0; animation: mb-fade-up .7s cubic-bezier(.2,.7,.2,1) .3s both; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      .hero-copy > *, .hero-media { opacity: 1 !important; transform: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
     }
 
     /* ===== Marquee / trust ===== */
@@ -879,6 +896,29 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ===== Zahlen-Count-up bei den Stats =====
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function animateCount(el) {
+      var raw = el.textContent.trim();
+      var m = raw.match(/^(\d+)([\s\S]*)$/);
+      if (!m || reduceMotion) return;
+      var target = parseInt(m[1], 10), suffix = m[2], dur = 1100, startTs = null;
+      el.textContent = '0' + suffix;
+      function step(ts) {
+        if (!startTs) startTs = ts;
+        var p = Math.min((ts - startTs) / dur, 1);
+        el.textContent = Math.round(p * target) + suffix;
+        if (p < 1) requestAnimationFrame(step); else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      var statObs = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.stat-num').forEach(function (el) { statObs.observe(el); });
+    }
 
     // ===== Mobiles Menue (Burger) =====
     const navToggle = document.getElementById('nav-toggle');

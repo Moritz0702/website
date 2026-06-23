@@ -159,6 +159,9 @@
     header h1 span { background: linear-gradient(120deg, var(--accent), var(--accent-2), var(--accent)); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: mb-shimmer 7s linear infinite; }
     .lede { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 56ch; margin-bottom: 40px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .hero-trust { display: flex; align-items: center; gap: 10px 18px; flex-wrap: wrap; margin-top: 22px; font-size: 14px; color: var(--ink-dim); }
+    .hero-trust .stars { color: #fbbc04; letter-spacing: 1px; }
+    .hero-trust strong { color: var(--ink-soft); font-weight: 600; }
     .btn-primary { background: var(--accent); color: #fff; padding: 16px 32px; border-radius: 100px; font-weight: 600; font-size: 16px; transition: transform .2s, box-shadow .2s; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(91,140,255,.4); }
     .btn-ghost { padding: 16px 24px; border-radius: 100px; border: 1px solid var(--line); font-weight: 600; color: var(--ink); transition: border-color .2s, background .2s; }
@@ -184,6 +187,7 @@
     .hero-copy h1 { animation-delay: .15s; }
     .hero-copy .lede { animation-delay: .30s; }
     .hero-copy .hero-actions { animation-delay: .42s; }
+    .hero-copy .hero-trust { animation-delay: .52s; }
     .hero-media { opacity: 0; animation: mb-fade-up .7s cubic-bezier(.2,.7,.2,1) .3s both; }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
@@ -217,8 +221,8 @@
     /* ===== Services ===== */
     #leistungen { border-top: 1px solid var(--line); }
     .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
-    .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .25s, border-color .25s; position: relative; overflow: hidden; }
-    .svc:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; position: relative; overflow: hidden; }
+    .svc:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 18px 44px rgba(91,140,255,.14); }
     .svc-num { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 18px; display: block; }
     .svc h3 { font-size: 1.35rem; margin-bottom: 12px; }
     .svc p { color: var(--ink-soft); font-size: 15px; }
@@ -355,6 +359,7 @@
           <a href="#kontakt" class="btn-primary" data-i18n="hero.cta1">Jetzt kostenloses Erstgespräch buchen</a>
           <a href="#leistungen" class="btn-ghost" data-i18n="hero.cta2">Wie ich arbeite →</a>
         </div>
+        <p class="hero-trust" data-i18n="hero.trust"><span class="stars">★★★★★</span> <strong>5,0</strong> bei Google · <strong>10+ Jahre</strong> Erfahrung · <strong>6 Mio. €+</strong> Werbebudget gesteuert</p>
       </div>
       <div class="hero-media">
         <img src="assets/images/moritz.jpg" alt="Moritz Buch – Freelance Performance Marketing & E-Commerce" width="1000" height="1333" />
@@ -778,6 +783,7 @@
         'hero.lede': `I help <strong>e-commerce brands &amp; startups</strong> use digital marketing to win <strong>more customers and revenue</strong> – data-driven, profitable, hands-on. Also for local service providers, practices &amp; B2B.`,
         'hero.cta1': `Book your free intro call`,
         'hero.cta2': `How I work →`,
+        'hero.trust': `<span class="stars">★★★★★</span> <strong>5.0</strong> on Google · <strong>10+ years</strong> experience · <strong>€6M+</strong> ad budget managed`,
         'trust.label': `Clients & roles from 10+ years`,
         'svc.tag': `Services`,
         'svc.title': `Strategically planned. Hands-on delivered. AI-first.`,

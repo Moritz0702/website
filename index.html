@@ -222,7 +222,11 @@
     #leistungen { border-top: 1px solid var(--line); }
     .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
     .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; position: relative; overflow: hidden; }
-    .svc:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 18px 44px rgba(91,140,255,.14); }
+    .svc:hover { border-color: var(--accent); }
+    a.svc { cursor: pointer; }
+    a.svc:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(91,140,255,.14); }
+    .svc-more { display: inline-block; margin-top: 14px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 14px; color: var(--accent); transition: transform .2s ease; }
+    a.svc:hover .svc-more { transform: translateX(5px); }
     .svc-num { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 18px; display: block; }
     .svc h3 { font-size: 1.35rem; margin-bottom: 12px; }
     .svc p { color: var(--ink-soft); font-size: 15px; }
@@ -452,19 +456,20 @@
       <p class="s-intro" data-i18n="fw.intro">Mein Fokus liegt auf E-Commerce &amp; Startups – ich bin aber breit aufgestellt. Wähle deinen Bereich für mehr Infos:</p>
       <div class="svc-grid">
         <a class="svc feature" href="/e-commerce/">
-          <span class="svc-num" data-i18n="fw.c1tag">Fokus →</span>
+          <span class="svc-num" data-i18n="fw.c1tag">Fokus</span>
           <h3 data-i18n="fw.c1title">E-Commerce &amp; Startups</h3>
           <p data-i18n="fw.c1desc">Mehr Kunden &amp; profitables Wachstum für D2C-Brands, Online-Shops und Startups.</p>
+          <span class="svc-more" data-i18n="card.more">Mehr erfahren →</span>
         </a>
         <a class="svc" href="/lokale-dienstleister/">
-          <span class="svc-num">→</span>
           <h3 data-i18n="fw.c2title">Lokale Dienstleister &amp; Praxen</h3>
           <p data-i18n="fw.c2desc">Planbar mehr Anfragen &amp; Patienten für lokale Anbieter und Praxen.</p>
+          <span class="svc-more" data-i18n="card.more">Mehr erfahren →</span>
         </a>
         <a class="svc" href="/b2b/">
-          <span class="svc-num">→</span>
           <h3 data-i18n="fw.c3title">B2B</h3>
           <p data-i18n="fw.c3desc">Qualifizierte Leads und planbare Pipeline für erklärungsbedürftige Angebote.</p>
+          <span class="svc-more" data-i18n="card.more">Mehr erfahren →</span>
         </a>
       </div>
     </div>
@@ -659,11 +664,13 @@
           <span class="svc-num" data-i18n="ins.card2label">Artikel · Lead-Gen</span>
           <h3 data-i18n="ins.card2title">Patientengewinnung für Arztpraxen mit Meta Ads</h3>
           <p data-i18n="ins.card2excerpt">Bewährtes Setup für Praxen: lokal broad starten, über Retargeting günstige Lead-Kosten erzielen – und mit sauberem Tracking hohe Lead-Qualität sichern.</p>
+          <span class="svc-more" data-i18n="card.more">Mehr erfahren →</span>
         </a>
         <a class="svc" href="/blog/meta-ads-lokale-dienstleister.html">
           <span class="svc-num" data-i18n="ins.label">Artikel · Meta Ads</span>
           <h3 data-i18n="ins.card1title">Meta Ads für lokale Dienstleister: planbar Anfragen gewinnen</h3>
           <p data-i18n="ins.card1excerpt">Welche Kampagnen-Struktur, Creatives und welches Tracking lokale Dienstleister wirklich brauchen, um planbar Anfragen zu gewinnen.</p>
+          <span class="svc-more" data-i18n="card.more">Mehr erfahren →</span>
         </a>
       </div>
       <div style="margin-top:32px;">
@@ -758,7 +765,8 @@
         'fw.tag': `Who I help`,
         'fw.title': `Who I work with.`,
         'fw.intro': `My focus is e-commerce &amp; startups – but I work broadly. Pick your area for more:`,
-        'fw.c1tag': `Focus →`,
+        'fw.c1tag': `Focus`,
+        'card.more': `Learn more →`,
         'fw.c1title': `E-Commerce &amp; Startups`,
         'fw.c1desc': `More customers &amp; profitable growth for D2C brands, online shops and startups.`,
         'fw.c2title': `Local service providers &amp; practices`,

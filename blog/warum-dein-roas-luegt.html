@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warum dein ROAS lügt: Über-Attribution, Blended Metrics & Single Source of Truth | Moritz Buch</title>
+  <meta name="description" content="Warum der ROAS im Werbekonto trügt: das Über-Attributions-Problem, warum du beim Vertrauen in jedes Kanal-Backend zu viel Geld verbrennst – und wie du mit Blended Metrics (MER, Deckungsbeitrag, CAC) einen Single Source of Truth für dein E-Commerce-Marketing schaffst." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.moritz-buch.com/blog/warum-dein-roas-luegt.html" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Warum dein ROAS lügt: Über-Attribution, Blended Metrics & Single Source of Truth" />
+  <meta property="og:description" content="Warum jedes Werbekonto sich dieselben Verkäufe gutschreibt – und wie du mit Blended Metrics steuerst, statt Budget zu verbrennen." />
+  <meta property="og:url" content="https://www.moritz-buch.com/blog/warum-dein-roas-luegt.html" />
+  <meta property="og:image" content="https://www.moritz-buch.com/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Warum dein ROAS lügt: Über-Attribution, Blended Metrics & Single Source of Truth",
+    "description": "Warum der ROAS im Werbekonto trügt, wie das Über-Attributions-Problem entsteht und wie du mit Blended Metrics (MER, Deckungsbeitrag, CAC) einen Single Source of Truth schaffst.",
+    "image": "https://www.moritz-buch.com/assets/images/og-image.jpg",
+    "datePublished": "2026-06-24",
+    "dateModified": "2026-06-24",
+    "author": { "@type": "Person", "name": "Moritz Buch", "url": "https://www.moritz-buch.com/" },
+    "publisher": { "@type": "Person", "name": "Moritz Buch" },
+    "mainEntityOfPage": "https://www.moritz-buch.com/blog/warum-dein-roas-luegt.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css" />
+  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/anim.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="/" class="logo">Moritz<b>.</b>Buch</a>
+      <div class="nav-right">
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#kontakt" class="nav-cta">Gespräch anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="wrap">
+      <div class="article-inner">
+        <a href="/blog/" class="back-link">← Zum Blog</a>
+        <span class="tag">Attribution &amp; Tracking</span>
+        <h1>Warum dein ROAS lügt: Über-Attribution, Blended Metrics &amp; der Single Source of Truth</h1>
+        <div class="article-meta">24. Juni 2026 · 8 Min Lesezeit · von Moritz Buch</div>
+
+        <div class="article-body">
+          <p>Es ist ein Szenario, das ich immer wieder sehe: Der Meta-Ads-Manager meldet einen ROAS von 4. Google Ads meldet einen ROAS von 6. TikTok meldet einen ROAS von 3. Rechnet man alles zusammen, müsste die Kasse überquellen. Tut sie aber nicht – am Monatsende ist der Deckungsbeitrag dünner als gedacht. <strong>Willkommen beim größten Denkfehler im Performance Marketing.</strong></p>
+
+          <p>Die Wahrheit ist unbequem: <strong>Der ROAS, den dir jedes Werbekonto anzeigt, ist keine objektive Zahl – er ist eine Verkaufsargumentation der Plattform für ihr eigenes Budget.</strong> Wer ihn für bare Münze nimmt, trifft systematisch falsche Entscheidungen.</p>
+
+          <h2>Was der ROAS im Werbekonto wirklich misst</h2>
+          <p>ROAS heißt <em>Return on Ad Spend</em> – zugeschriebener Umsatz geteilt durch Werbeausgaben. Das Problem steckt im Wort <strong>„zugeschrieben"</strong>. Jede Plattform schreibt sich Verkäufe nach ihren <strong>eigenen Attributionsregeln</strong> gut: Meta zählt eine Conversion, wenn jemand innerhalb von 7 Tagen nach einem Klick (oder 1 Tag nach einem View) kauft. Google zählt nach seinem eigenen Modell. TikTok nach seinem.</p>
+          <p>Keine dieser Plattformen weiß, was die andere getan hat. Und keine hat ein Interesse daran, sich einen Verkauf <em>nicht</em> gutzuschreiben. Das Ergebnis: Der ROAS im Backend ist strukturell <strong>zu optimistisch</strong>.</p>
+
+          <h2>Das Über-Attributions-Problem: jeder Kanal reklamiert dieselbe Conversion</h2>
+          <p>Stell dir eine typische Customer Journey vor. Eine Kundin sieht dein Produkt zuerst in einer <strong>TikTok-Anzeige</strong>. Ein paar Tage später begegnet ihr ein <strong>Meta-Retargeting-Ad</strong>. Kurz vor dem Kauf googelt sie deinen Markennamen und klickt auf eine <strong>Google-Anzeige</strong>. Dann kauft sie.</p>
+          <p>Ein Verkauf – aber <strong>drei Plattformen reklamieren ihn für sich</strong>. In der Summe der Backends erscheint dieser eine Kauf als drei attribuierte Conversions. Multipliziere das über tausende Bestellungen, und dein „addierter" Werbeumsatz liegt weit über dem, was tatsächlich durch die Kasse ging. Das ist <strong>Über-Attribution</strong> – und sie ist kein Randphänomen, sondern der Normalfall bei jedem Multi-Channel-Setup.</p>
+
+          <div class="callout">
+            <p>⚠️ <strong>Der Kernsatz:</strong> Würdest du jedem Marketing-Backend blind vertrauen und dein Budget danach hochfahren, schmeißt du zu viel Geld aus dem Fenster. Du skalierst dann Kanäle, die sich fremde Verkäufe gutschreiben – und zahlst für Umsatz, der auch ohne sie gekommen wäre.</p>
+          </div>
+
+          <h2>Warum das gerade beim Skalieren teuer wird</h2>
+          <p>Solange die Budgets klein sind, fällt der Fehler kaum auf. Aber genau in dem Moment, in dem du <strong>skalieren</strong> willst, wird er zur Falle: Du siehst überall „profitable" ROAS-Werte und drehst das Budget auf. Der reale, geldwerte Effekt (die <strong>Inkrementalität</strong> – also der Umsatz, der <em>nur wegen</em> der Anzeige entstanden ist) wächst aber nicht im gleichen Maß. Das Ergebnis: Deine Werbekosten steigen schneller als dein echter Deckungsbeitrag. Auf dem Papier läuft alles top, im Bankkonto wird es enger.</p>
+
+          <h2>Der Single Source of Truth: blended statt plattformgläubig</h2>
+          <p>Die Lösung ist kein weiteres Attributions-Tool, das noch genauer „zuordnen" will. Die Lösung ist eine <strong>einzige, ehrliche Wahrheitsquelle</strong>, die sich nicht austricksen lässt: deine <strong>tatsächlichen Gesamtzahlen</strong>. Statt jeder Plattform einzeln zu glauben, schaust du auf das Gesamtbild:</p>
+          <ul>
+            <li><strong>MER (Marketing Efficiency Ratio):</strong> Gesamtumsatz ÷ gesamte Werbeausgaben über <em>alle</em> Kanäle. Diese eine Zahl lässt sich nicht schönrechnen – sie kennt keine doppelt gezählten Verkäufe.</li>
+            <li><strong>Deckungsbeitrag statt Umsatz:</strong> ROAS ignoriert deine Marge. Ein ROAS von 3 kann tödlich oder traumhaft sein – je nachdem, was nach Wareneinsatz, Versand und Retouren übrig bleibt. Steuere auf den <strong>Deckungsbeitrag (DB2/DB3)</strong>, nicht auf Umsatz.</li>
+            <li><strong>CAC &amp; Neukunden-CAC:</strong> Was kostet dich ein Kunde wirklich – und was ein <em>Neukunde</em>? Retargeting sieht oft brillant aus, weil es Bestandskunden „einsammelt", die ohnehin gekauft hätten. Der Blick auf die Neukundenkosten trennt echten Zuwachs von Selbstbetrug.</li>
+            <li><strong>Contribution Margin nach Werbekosten:</strong> Am Ende zählt, was nach allen variablen Kosten <em>und</em> Werbeausgaben übrig bleibt. Das ist die Zahl, die dein Wachstum finanziert.</li>
+          </ul>
+
+          <h2>So steuerst du in der Praxis</h2>
+          <p>Der Plattform-ROAS wandert dabei nicht in den Müll – aber er wechselt die Rolle:</p>
+          <ul>
+            <li><strong>Blended-Ziel setzen:</strong> Definiere ein MER- bzw. Deckungsbeitrags-Ziel für das <em>gesamte</em> Marketing. Das ist deine oberste Steuerungsgröße – die Ampel, auf die du wirklich schaust.</li>
+            <li><strong>Plattform-ROAS als Richtungsanzeiger, nicht als Wahrheit:</strong> Innerhalb eines Kanals ist der ROAS-Trend nützlich, um Kampagnen und Creatives <em>relativ</em> zu vergleichen. Als absolute „so viel habe ich verdient"-Zahl taugt er nicht.</li>
+            <li><strong>Post-Purchase-Survey:</strong> Die simple Frage im Checkout „Wie hast du von uns erfahren?" liefert dir eine von den Plattformen unabhängige Perspektive – überraschend ehrlich und günstig.</li>
+            <li><strong>Inkrementalität testen:</strong> Über Geo-Lift-Tests oder saubere An/Aus-Phasen einzelner Kanäle misst du, was wirklich zusätzlich passiert, wenn ein Kanal läuft – und was nicht.</li>
+            <li><strong>Sauberes Tracking als Fundament:</strong> Server-seitiges Tracking und die Conversions-API verbessern die Datenqualität, mit der die Plattformen optimieren. Sie lösen die Über-Attribution nicht – aber sie machen die Optimierung <em>innerhalb</em> eines Kanals treffsicherer.</li>
+          </ul>
+
+          <!-- TODO Moritz: Hier passt ein konkretes (anonymisiertes) Beispiel aus deiner Praxis stark – z. B. "Kunde X: Summe der Backend-ROAS = Y, realer MER = Z; nach Umstellung auf Blended-Steuerung DB um XX % gestiegen." Schick es mir, ich baue es sauber ein. -->
+
+          <div class="callout">
+            <p>💡 <strong>Merksatz:</strong> Vertrau nicht der Summe deiner Werbekonten – vertrau deiner Buchhaltung. Wenn Werbeausgaben rauf und Deckungsbeitrag <em>nicht</em> mitgeht, hast du Über-Attribution gefüttert, kein Wachstum gekauft.</p>
+          </div>
+
+          <p>Der Punkt ist nicht, dass Attribution wertlos wäre – sondern dass du sie kennen musst, um ihr nicht auf den Leim zu gehen. Wer sein E-Commerce-Marketing über eine <strong>ehrliche, blended Wahrheitsquelle</strong> steuert, trifft ruhigere, bessere Entscheidungen – und skaliert profitabel statt nur auf dem Papier.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="author-box">
+    <img src="/assets/images/moritz.jpg" alt="Moritz Buch" loading="lazy" />
+    <div>
+      <div class="who">Moritz Buch</div>
+      <div class="role">Freelance Performance Marketing &amp; E-Commerce · 10+ Jahre Erfahrung</div>
+    </div>
+  </div>
+  <div class="article-tail">
+    <div class="related">
+      <span class="related-label">Das könnte dich auch interessieren</span>
+      <a class="related-link" href="/blog/creative-testing-system-d2c.html">Creative-Testing-System für D2C-Brands: Winning Creatives am Fließband →</a>
+    </div>
+    <div class="post-cta">
+      <h2>Steuerst du dein Marketing über die richtigen Zahlen?</h2>
+      <p>Im kostenlosen Erstgespräch schaue ich mir dein Setup an und zeige dir, wo du durch Über-Attribution Budget verlierst – und wie du auf einen Single Source of Truth umstellst.</p>
+      <a href="/#kontakt" class="btn-primary">Kostenloses Gespräch buchen</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Moritz Buch · Performance Marketing &amp; E-Commerce</p>
+      <div class="foot-links">
+        <a href="/blog/">Blog</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

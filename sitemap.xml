@@ -31,6 +31,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.moritz-buch.com/blog/inhouse-statt-agentur.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.moritz-buch.com/blog/paid-marketing-setup-startups.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.moritz-buch.com/blog/email-marketing-online-shops.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.moritz-buch.com/blog/warum-dein-roas-luegt.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

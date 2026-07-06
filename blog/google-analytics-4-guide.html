@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Analytics 4 (GA4) für E-Commerce: die wichtigsten Reports verständlich | Moritz Buch</title>
+  <meta name="description" content="Google Analytics 4 verständlich erklärt: was sich gegenüber Universal Analytics geändert hat, welche GA4-Reports für E-Commerce wirklich zählen (Akquise, Engagement, Monetarisierung), wie du Conversions einrichtest – und wie GA4 in dein Gesamt-Tracking passt." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.moritz-buch.com/blog/google-analytics-4-guide.html" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Google Analytics 4 (GA4) für E-Commerce: die wichtigsten Reports" />
+  <meta property="og:description" content="Was sich geändert hat, welche GA4-Reports für E-Commerce zählen und wie GA4 in dein Gesamt-Tracking passt." />
+  <meta property="og:url" content="https://www.moritz-buch.com/blog/google-analytics-4-guide.html" />
+  <meta property="og:image" content="https://www.moritz-buch.com/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Google Analytics 4 (GA4) für E-Commerce: die wichtigsten Reports verständlich",
+    "description": "Was sich gegenüber Universal Analytics geändert hat, welche GA4-Reports für E-Commerce zählen und wie GA4 in dein Gesamt-Tracking passt.",
+    "image": "https://www.moritz-buch.com/assets/images/og-image.jpg",
+    "datePublished": "2026-04-30",
+    "dateModified": "2026-04-30",
+    "author": { "@type": "Person", "name": "Moritz Buch", "url": "https://www.moritz-buch.com/" },
+    "publisher": { "@type": "Person", "name": "Moritz Buch" },
+    "mainEntityOfPage": "https://www.moritz-buch.com/blog/google-analytics-4-guide.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css" />
+  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/anim.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="/" class="logo">Moritz<b>.</b>Buch</a>
+      <div class="nav-right">
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#kontakt" class="nav-cta">Gespräch anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="wrap">
+      <div class="article-inner">
+        <a href="/blog/" class="back-link">← Zum Blog</a>
+        <span class="tag">Analytics</span>
+        <h1>Google Analytics 4 (GA4) für E-Commerce: die wichtigsten Reports</h1>
+        <div class="article-meta">30. April 2026 · 8 Min Lesezeit · von Moritz Buch</div>
+
+        <div class="article-body">
+          <p>Google Analytics 4 hat das alte Universal Analytics abgelöst – und viele fühlen sich seitdem im Tool verloren. Dabei liefert GA4 genau das, was du für fundierte Entscheidungen brauchst, wenn du weißt, wo du hinschauen musst. Dieser Guide erklärt das Wichtigste ohne Ballast.</p>
+
+          <h2>Was bei GA4 grundlegend anders ist</h2>
+          <p>Der größte Unterschied: GA4 denkt in <strong>Ereignissen (Events)</strong> statt in Sitzungen und Seitenaufrufen. Jede Interaktion – Seitenaufruf, Scroll, Klick, Kauf – ist ein Event. Das ist flexibler, aber ungewohnt. Außerdem ist GA4 von Grund auf auf <strong>Datenschutz und geräteübergreifende Nutzer</strong> ausgelegt und modelliert fehlende Daten teils, statt sie nur zu zählen.</p>
+
+          <h2>Die vier Report-Bereiche, die wirklich zählen</h2>
+          <h3>1. Akquise – woher kommen deine Nutzer?</h3>
+          <p>Zeigt, über welche Kanäle (Organic, Paid, Direct, Social, E-Mail, Referral) Nutzer auf deine Seite kommen. Hier siehst du, welche Quellen Traffic <em>und</em> Conversions bringen – die Basis, um Kanäle überhaupt zu bewerten.</p>
+          <h3>2. Engagement – was tun sie auf der Seite?</h3>
+          <p>Welche Seiten werden besucht, wie lange bleiben Nutzer, welche Events lösen sie aus? Dieser Bereich ist Gold wert, um zu verstehen, ob dein <a href="/blog/landingpage-optimierung.html">Angebot organisch funktioniert</a> – bevor du Werbebudget draufkippst.</p>
+          <h3>3. Monetarisierung – was kaufen sie?</h3>
+          <p>Der E-Commerce-Kern: Umsatz, meistverkaufte Produkte, Kaufverhalten, Warenkorb- und Checkout-Abbrüche. Voraussetzung ist ein sauber eingerichtetes <strong>E-Commerce-Tracking</strong> (Events wie <code>view_item</code>, <code>add_to_cart</code>, <code>purchase</code>).</p>
+          <h3>4. Bindung (Retention) – kommen sie wieder?</h3>
+          <p>Zeigt, wie gut du Nutzer zurückholst – ein wichtiger Frühindikator für deinen <a href="/blog/cac-vs-ltv.html">Lifetime Value</a>.</p>
+
+          <h2>Conversions (Key Events) richtig einrichten</h2>
+          <p>Der wohl wichtigste Setup-Schritt: In GA4 markierst du die Events, die für dich zählen (Kauf, Lead, Newsletter-Anmeldung), als <strong>Key Events / Conversions</strong>. Erst dann kannst du Kanäle sinnvoll nach ihrem Beitrag vergleichen. Ohne saubere Conversion-Definition ist GA4 nur eine Traffic-Anzeige.</p>
+
+          <div class="callout">
+            <p>📌 <strong>Praxis-Tipp:</strong> Nutze die <strong>Explorationen</strong> (freie Analysen) für tiefergehende Fragen – z. B. Funnel-Analysen (wo springen Nutzer im Checkout ab?) oder Pfad-Analysen. Die Standard-Reports sind der Einstieg, die Explorationen die eigentliche Stärke von GA4.</p>
+          </div>
+
+          <h2>Wie GA4 in dein Gesamt-Tracking passt</h2>
+          <p>Wichtig einzuordnen: GA4 ist eine <strong>Perspektive</strong>, nicht die absolute Wahrheit. Es nutzt (überwiegend) ein datengetriebenes Attributionsmodell und wird dir andere Zahlen zeigen als die Werbekonten von Meta oder Google Ads – weil jedes System anders zählt. GA4 ist stark, um <strong>Nutzerverhalten und Kanal-Trends</strong> zu verstehen. Für die geldwerte Gesamtsteuerung kombinierst du es mit deinen echten Zahlen: <a href="/blog/warum-dein-roas-luegt.html">Blended Metrics</a> und ein Bewusstsein für <a href="/blog/attributionsmodelle-erklaert.html">Attribution</a>.</p>
+
+          <h2>Datenschutz nicht vergessen</h2>
+          <p>GA4 setzt in der EU ein sauberes <strong>Consent-Management</strong> voraus. Ohne Einwilligung dürfen keine personenbezogenen Analyse-Daten erhoben werden – das gehört von Anfang an mitgedacht, damit dein Setup rechtssicher ist.</p>
+
+          <!-- TODO Moritz: Wenn du einen bevorzugten GA4-Report/Custom-Dashboard-Aufbau für Kunden nutzt, schick mir die Struktur – ich baue einen Praxis-Abschnitt "So schaue ich in GA4" ein. -->
+
+          <div class="callout">
+            <p>💡 <strong>Merksatz:</strong> GA4 ist kein Reporting-Ballast, sondern dein Fenster ins Nutzerverhalten. Richtig eingerichtet (Conversions!) und richtig eingeordnet (eine Perspektive, nicht die Wahrheit) ist es eines deiner wertvollsten Werkzeuge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="author-box">
+    <img src="/assets/images/moritz.jpg" alt="Moritz Buch" loading="lazy" />
+    <div>
+      <div class="who">Moritz Buch</div>
+      <div class="role">Freelance Performance Marketing &amp; E-Commerce · 10+ Jahre Erfahrung</div>
+    </div>
+  </div>
+  <div class="article-tail">
+    <div class="related">
+      <span class="related-label">Das könnte dich auch interessieren</span>
+      <a class="related-link" href="/blog/server-side-tracking-conversions-api.html">Server-Side-Tracking &amp; Conversions API einfach erklärt →</a>
+    </div>
+    <div class="post-cta">
+      <h2>Nutzt du GA4 – oder nur an?</h2>
+      <p>Im kostenlosen Erstgespräch schauen wir, ob dein GA4 sauber aufgesetzt ist und ob du die richtigen Reports für deine Entscheidungen nutzt.</p>
+      <a href="/#kontakt" class="btn-primary">Kostenloses Gespräch buchen</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Moritz Buch · Performance Marketing &amp; E-Commerce</p>
+      <div class="foot-links">
+        <a href="/blog/">Blog</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server-Side-Tracking & Conversions API einfach erklärt | Moritz Buch</title>
+  <meta name="description" content="Server-Side-Tracking und die Conversions API (CAPI) verständlich erklärt: warum Browser-Tracking allein seit iOS-Updates und Adblockern nicht mehr reicht, wie serverseitiges Tracking die Datenqualität rettet und was das für deine Kampagnen-Performance bedeutet." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.moritz-buch.com/blog/server-side-tracking-conversions-api.html" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Server-Side-Tracking & Conversions API einfach erklärt" />
+  <meta property="og:description" content="Warum Browser-Tracking allein nicht mehr reicht und wie serverseitiges Tracking die Datenqualität rettet." />
+  <meta property="og:url" content="https://www.moritz-buch.com/blog/server-side-tracking-conversions-api.html" />
+  <meta property="og:image" content="https://www.moritz-buch.com/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Server-Side-Tracking & Conversions API einfach erklärt",
+    "description": "Warum Browser-Tracking allein nicht mehr reicht und wie serverseitiges Tracking die Datenqualität rettet.",
+    "image": "https://www.moritz-buch.com/assets/images/og-image.jpg",
+    "datePublished": "2026-05-07",
+    "dateModified": "2026-05-07",
+    "author": { "@type": "Person", "name": "Moritz Buch", "url": "https://www.moritz-buch.com/" },
+    "publisher": { "@type": "Person", "name": "Moritz Buch" },
+    "mainEntityOfPage": "https://www.moritz-buch.com/blog/server-side-tracking-conversions-api.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css" />
+  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/anim.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="/" class="logo">Moritz<b>.</b>Buch</a>
+      <div class="nav-right">
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#kontakt" class="nav-cta">Gespräch anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="wrap">
+      <div class="article-inner">
+        <a href="/blog/" class="back-link">← Zum Blog</a>
+        <span class="tag">Tracking</span>
+        <h1>Server-Side-Tracking &amp; Conversions API einfach erklärt</h1>
+        <div class="article-meta">7. Mai 2026 · 7 Min Lesezeit · von Moritz Buch</div>
+
+        <div class="article-body">
+          <p>„Wir haben doch den Pixel eingebaut" – das reicht heute nicht mehr. Seit iOS-Datenschutz-Updates, Cookie-Bannern und Adblockern geht ein erheblicher Teil der klassisch im Browser gemessenen Conversions verloren. Die Antwort darauf heißt <strong>Server-Side-Tracking</strong> bzw. <strong>Conversions API (CAPI)</strong>. Was das ist und warum es über deine Kampagnen-Performance mitentscheidet – ohne Fachchinesisch.</p>
+
+          <h2>Wie klassisches Browser-Tracking funktioniert (und warum es bröckelt)</h2>
+          <p>Der klassische <strong>Pixel</strong> ist ein kleines Stück Code im Browser des Nutzers. Kauft jemand, „feuert" der Pixel das Ereignis an Meta oder Google. Das Problem: Dieser Weg lässt sich leicht blockieren – durch iOS-Tracking-Einschränkungen, Browser wie Safari, Adblocker oder abgelehnte Cookies. Ergebnis: <strong>Ein wachsender Teil der Verkäufe wird nicht gemessen</strong>, obwohl er stattgefunden hat.</p>
+
+          <h2>Was Server-Side-Tracking anders macht</h2>
+          <p>Beim serverseitigen Tracking wird das Ereignis nicht (nur) aus dem Browser gemeldet, sondern <strong>von deinem eigenen Server</strong> direkt an die Plattform gesendet – bei Meta über die <strong>Conversions API</strong>, bei Google über serverseitige Lösungen. Da diese Verbindung nicht im Browser des Nutzers hängt, lässt sie sich nicht so leicht blockieren. Vereinfacht: Statt sich auf den Boten im Browser zu verlassen, schickst du die Information über einen zweiten, robusteren Weg.</p>
+
+          <div class="callout">
+            <p>📌 <strong>Wichtig zum Verständnis:</strong> Server-Side ersetzt den Pixel meist nicht, sondern <strong>ergänzt</strong> ihn. Beide Wege zusammen (mit sauberer Entdopplung, damit ein Kauf nicht doppelt zählt) liefern das vollständigste Bild.</p>
+          </div>
+
+          <h2>Warum das deine Performance beeinflusst – nicht nur deine Reports</h2>
+          <p>Das ist der oft übersehene Punkt: Bessere Tracking-Daten sind kein reines Reporting-Thema. Die Algorithmen von Meta und Google <strong>lernen aus genau diesen Conversion-Signalen</strong>, wem sie deine Anzeigen zeigen. Fehlen viele Conversions in den Daten, optimiert der Algorithmus auf unvollständiger Grundlage – und liefert schlechtere Ergebnisse. Sauberes, vollständiges Tracking macht die Optimierung <em>innerhalb</em> eines Kanals also messbar treffsicherer.</p>
+
+          <h2>Was es NICHT löst: die Über-Attribution</h2>
+          <p>Ein häufiges Missverständnis: Server-Side-Tracking macht die Zahlen „ehrlicher". Es macht sie <strong>vollständiger</strong>, aber nicht objektiv – jede Plattform schreibt sich weiterhin nach ihren eigenen Regeln Verkäufe gut. Für die Gesamtsteuerung brauchst du deshalb trotzdem <a href="/blog/warum-dein-roas-luegt.html">Blended Metrics</a> und passende <a href="/blog/attributionsmodelle-erklaert.html">Attributionsmodelle</a>. Server-Side verbessert die Datenqualität pro Kanal – die Wahrheit übers Ganze liefert es nicht.</p>
+
+          <h2>Und der Datenschutz?</h2>
+          <p>Serverseitiges Tracking entbindet dich <strong>nicht</strong> von den Datenschutzpflichten. Einwilligung (Consent) bleibt Voraussetzung, und die Daten müssen datenschutzkonform verarbeitet werden. Ein sauberes Setup denkt Tracking und Consent-Management von Anfang an zusammen.</p>
+
+          <!-- TODO Moritz: Wenn du deinen bevorzugten technischen Ansatz/Tool-Stack für Server-Side nennen willst (z. B. Setup-Weg, gängige Tools), schick es mir – ich baue einen Praxis-Abschnitt ein. -->
+
+          <div class="callout">
+            <p>💡 <strong>Merksatz:</strong> Der Pixel allein ist heute ein löchriger Eimer. Server-Side-Tracking dichtet ihn ab – bessere Daten, bessere Algorithmus-Optimierung, mehr Performance. Die Wahrheit übers Gesamtbild ersetzt es nicht.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="author-box">
+    <img src="/assets/images/moritz.jpg" alt="Moritz Buch" loading="lazy" />
+    <div>
+      <div class="who">Moritz Buch</div>
+      <div class="role">Freelance Performance Marketing &amp; E-Commerce · 10+ Jahre Erfahrung</div>
+    </div>
+  </div>
+  <div class="article-tail">
+    <div class="related">
+      <span class="related-label">Das könnte dich auch interessieren</span>
+      <a class="related-link" href="/blog/attributionsmodelle-erklaert.html">Attributionsmodelle erklärt: Last-Click, Data-Driven &amp; Inkrementalität →</a>
+    </div>
+    <div class="post-cta">
+      <h2>Ist dein Tracking noch dicht?</h2>
+      <p>Im kostenlosen Erstgespräch prüfen wir, wie vollständig deine Conversion-Daten sind – und was das für deine Kampagnen bedeutet.</p>
+      <a href="/#kontakt" class="btn-primary">Kostenloses Gespräch buchen</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Moritz Buch · Performance Marketing &amp; E-Commerce</p>
+      <div class="foot-links">
+        <a href="/blog/">Blog</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
